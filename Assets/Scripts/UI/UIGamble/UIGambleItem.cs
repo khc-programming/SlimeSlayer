@@ -124,7 +124,11 @@ public class UIGambleItem : BaseUI, IPointerEnterHandler, IPointerExitHandler
         star.AddRange(UtilHelper.FindAll<Image>(transform, "Grade", false, true));
         button = GetComponent<Button>();
         if (button != null)
+        {
             button.onClick.AddListener(OnClick);
+            button.interactable = false;
+        }
+            
 
         Close();
         

@@ -71,6 +71,7 @@ public class UIItemGamblePopup : BaseUI
         {
             value.Init();
             value.SetOnClickDelegate(OnClick);
+            
         }
     }
 

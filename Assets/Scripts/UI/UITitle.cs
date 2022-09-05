@@ -172,6 +172,8 @@ public class UITitle : BaseUI
     #region //추상 클래스 정의부
     public override void Init()
     {
+
+       
         
         VerticalLayoutGroup v = GetComponentInChildren<VerticalLayoutGroup>(true);
         ani = GetComponentInChildren<Animator>();

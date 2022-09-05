@@ -18,10 +18,7 @@ public class GambleInputEventHandler : MonoBehaviour
 
     private Button leftBtn;
     private Button rightBtn;
-    //private Button charBtn1;
-    //private Button charBtn10;
-    //private Button itemBtn1;
-    //private Button itemBtn10;
+   
     private Button exitBack;
     private Button exitButton;
 
@@ -233,12 +230,7 @@ public class GambleInputEventHandler : MonoBehaviour
 
             AudioMng.Instance.PlayUI("UI_Shop");
             ani.SetTrigger("Char1");
-            //GameDB.money -= 1000;
-            //UIMng.Instance.SetMoney(GameDB.money);
-            //List<PlayerInfo> tempList = new List<PlayerInfo>();
-            //tempList = GameDB.RandomCharCreate(1);
-
-            //charGamblePopup.SetGambleCharInfo(tempList);
+         
         }
     }
 
@@ -257,12 +249,7 @@ public class GambleInputEventHandler : MonoBehaviour
         {
             AudioMng.Instance.PlayUI("UI_Shop");
             ani.SetTrigger("Char10");
-            //GameDB.money -= 11000;
-            //UIMng.Instance.SetMoney(GameDB.money);
-            //List<PlayerInfo> tempList = new List<PlayerInfo>();
-            //tempList = GameDB.RandomCharCreate(12);
-
-            //charGamblePopup.SetGambleCharInfo(tempList);
+          
         }
     }
 
@@ -314,12 +301,7 @@ public class GambleInputEventHandler : MonoBehaviour
         {
             AudioMng.Instance.PlayUI("UI_Shop");
             ani.SetTrigger("Item1");
-            //GameDB.money -= 1000;
-            //UIMng.Instance.SetMoney(GameDB.money);
-            //List<ItemInfo> tempList = new List<ItemInfo>();
-            //tempList = GameDB.randomCreate(1);
-
-            //itemGamblePopup.SetGambleItemInfo(tempList);
+           
         }
 
         
@@ -340,12 +322,7 @@ public class GambleInputEventHandler : MonoBehaviour
         {
             AudioMng.Instance.PlayUI("UI_Shop");
             ani.SetTrigger("Item10");
-            //GameDB.money -= 11000;
-            //UIMng.Instance.SetMoney(GameDB.money);
-            //List<ItemInfo> tempList = new List<ItemInfo>();
-            //tempList = GameDB.randomCreate(12);
-
-            //itemGamblePopup.SetGambleItemInfo(tempList);
+       
         }
     }
 
