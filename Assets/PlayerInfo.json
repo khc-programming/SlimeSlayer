@@ -1,0 +1,2339 @@
+{
+    "uniqueCount": 590,
+    "money": 4290200,
+    "charUniqueID": 549,
+    "jobType": 1,
+    "listOfChar": [
+        {
+            "spawnID": 1,
+            "hp": 380,
+            "currHp": 380,
+            "lastState": [
+                19,
+                0,
+                380
+            ],
+            "uniqueID": 500,
+            "tableID": 1,
+            "grade": 1,
+            "level": 10,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 9,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 780,
+            "currHp": 780,
+            "lastState": [
+                39,
+                0,
+                780
+            ],
+            "uniqueID": 505,
+            "tableID": 1,
+            "grade": 1,
+            "level": 30,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 29,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 502,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 506,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 510,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 511,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 512,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 513,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 514,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 515,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 516,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 517,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 518,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 519,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 450,
+            "currHp": 450,
+            "lastState": [
+                60,
+                0,
+                450
+            ],
+            "uniqueID": 520,
+            "tableID": 2,
+            "grade": 6,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 2,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 5
+                },
+                {
+                    "level": 0,
+                    "tableID": 6
+                },
+                {
+                    "level": 0,
+                    "tableID": 7
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 521,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 522,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 1,
+            "hp": 2765,
+            "currHp": 4865,
+            "lastState": [
+                666,
+                350,
+                4865
+            ],
+            "uniqueID": 549,
+            "tableID": 3,
+            "grade": 4,
+            "level": 70,
+            "equip": true,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                587,
+                588,
+                548
+            ],
+            "skillList": [
+                {
+                    "level": 10,
+                    "tableID": 8
+                },
+                {
+                    "level": 10,
+                    "tableID": 9
+                },
+                {
+                    "level": 40,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 10,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 575,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 576,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 577,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 578,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 579,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 580,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 581,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 582,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 450,
+            "currHp": 450,
+            "lastState": [
+                60,
+                0,
+                450
+            ],
+            "uniqueID": 583,
+            "tableID": 2,
+            "grade": 6,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 2,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 5
+                },
+                {
+                    "level": 0,
+                    "tableID": 6
+                },
+                {
+                    "level": 0,
+                    "tableID": 7
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 584,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 350,
+            "currHp": 350,
+            "lastState": [
+                40,
+                0,
+                350
+            ],
+            "uniqueID": 585,
+            "tableID": 3,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 586,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        }
+    ],
+    "listOfItems": [
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 503,
+            "tableID": 1,
+            "grade": 1,
+            "level": 10,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 507,
+            "tableID": 18,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 508,
+            "tableID": 3,
+            "grade": 3,
+            "level": 31,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 509,
+            "tableID": 19,
+            "grade": 3,
+            "level": 30,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 523,
+            "tableID": 21,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 524,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 525,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 526,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 527,
+            "tableID": 11,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 528,
+            "tableID": 20,
+            "grade": 5,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 529,
+            "tableID": 21,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 30,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 530,
+            "tableID": 26,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 531,
+            "tableID": 3,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 588,
+            "tableID": 20,
+            "grade": 5,
+            "level": 70,
+            "equip": true,
+            "equipCharacter": 549,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 533,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 534,
+            "tableID": 13,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 535,
+            "tableID": 3,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 536,
+            "tableID": 13,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 537,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 538,
+            "tableID": 10,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 539,
+            "tableID": 9,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 540,
+            "tableID": 19,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 541,
+            "tableID": 3,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 542,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 543,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 544,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 545,
+            "tableID": 10,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 900,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 589,
+            "tableID": 26,
+            "grade": 3,
+            "level": 30,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 547,
+            "tableID": 19,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 2100,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 548,
+            "tableID": 26,
+            "grade": 3,
+            "level": 70,
+            "equip": true,
+            "equipCharacter": 549,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 550,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 551,
+            "tableID": 21,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 552,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 553,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 554,
+            "tableID": 11,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 555,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 556,
+            "tableID": 22,
+            "grade": 6,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 30,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 557,
+            "tableID": 26,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 558,
+            "tableID": 20,
+            "grade": 5,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 30,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 559,
+            "tableID": 26,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 560,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 561,
+            "tableID": 9,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 562,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 563,
+            "tableID": 11,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 564,
+            "tableID": 21,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 565,
+            "tableID": 20,
+            "grade": 5,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 566,
+            "tableID": 21,
+            "grade": 4,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 567,
+            "tableID": 19,
+            "grade": 3,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 568,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 569,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 570,
+            "tableID": 18,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 571,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 572,
+            "tableID": 17,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 573,
+            "tableID": 2,
+            "grade": 2,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 587,
+            "tableID": 4,
+            "grade": 5,
+            "level": 70,
+            "equip": true,
+            "equipCharacter": 549,
+            "checkbox": false
+        }
+    ],
+    "listOfQuests": [
+        {
+            "NPCNAME": "ShopMan",
+            "LEVEL": 1,
+            "shopCount": [
+                {
+                    "tableID": 10100,
+                    "level": 0,
+                    "count": 2
+                },
+                {
+                    "tableID": 12201,
+                    "level": 0,
+                    "count": 1
+                },
+                {
+                    "tableID": 20100,
+                    "level": 0,
+                    "count": 2
+                },
+                {
+                    "tableID": 22201,
+                    "level": 0,
+                    "count": 1
+                }
+            ],
+            "upgradeCount": [],
+            "gambleCount": [],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "ShopMan",
+            "LEVEL": 2,
+            "shopCount": [
+                {
+                    "tableID": 11103,
+                    "level": 0,
+                    "count": 1
+                },
+                {
+                    "tableID": 21118,
+                    "level": 0,
+                    "count": 1
+                }
+            ],
+            "upgradeCount": [],
+            "gambleCount": [],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "UpgradeMan",
+            "LEVEL": 1,
+            "shopCount": [],
+            "upgradeCount": [
+                {
+                    "tableID": 10000000,
+                    "level": 0,
+                    "count": 10
+                },
+                {
+                    "tableID": 10026000,
+                    "level": 0,
+                    "count": 1
+                },
+                {
+                    "tableID": 20000000,
+                    "level": 0,
+                    "count": 10
+                },
+                {
+                    "tableID": 20026000,
+                    "level": 0,
+                    "count": 1
+                }
+            ],
+            "gambleCount": [],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "UpgradeMan",
+            "LEVEL": 2,
+            "shopCount": [],
+            "upgradeCount": [
+                {
+                    "tableID": 11030001,
+                    "level": 0,
+                    "count": 1
+                },
+                {
+                    "tableID": 20030003,
+                    "level": 0,
+                    "count": 1
+                }
+            ],
+            "gambleCount": [],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "GambleMan",
+            "LEVEL": 1,
+            "shopCount": [],
+            "upgradeCount": [],
+            "gambleCount": [
+                {
+                    "tableID": 10000,
+                    "level": 0,
+                    "count": 13
+                },
+                {
+                    "tableID": 20000,
+                    "level": 0,
+                    "count": 13
+                }
+            ],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "GambleMan",
+            "LEVEL": 2,
+            "shopCount": [],
+            "upgradeCount": [],
+            "gambleCount": [
+                {
+                    "tableID": 12004,
+                    "level": 0,
+                    "count": 2
+                },
+                {
+                    "tableID": 22004,
+                    "level": 0,
+                    "count": 2
+                }
+            ],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        },
+        {
+            "NPCNAME": "KingMan",
+            "LEVEL": 1,
+            "shopCount": [],
+            "upgradeCount": [],
+            "gambleCount": [],
+            "huntCount": [
+                {
+                    "tableID": 1,
+                    "level": 0,
+                    "count": 10
+                }
+            ],
+            "questState": 0,
+            "questDialogMode": 2
+        }
+    ]
+}
