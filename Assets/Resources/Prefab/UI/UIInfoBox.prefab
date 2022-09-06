@@ -4154,8 +4154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2460103407286765186
 CanvasRenderer:
@@ -6906,6 +6906,9 @@ MonoBehaviour:
     equipItemArray: 000000000000000000000000
     skillList: []
     skillPoint: 0
+    isSkill1: 1
+    isSkill2: 1
+    isSkill3: 1
     job: 0
     jobBit: 0
     iconCount: 0
@@ -7036,6 +7039,7 @@ MonoBehaviour:
   upHp: {fileID: 0}
   upPrice: {fileID: 0}
   upGamble: {fileID: 0}
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
   takeOnEquip: {fileID: 0}
   takeOnBuy: {fileID: 0}
   takeOnSell: {fileID: 0}
@@ -8126,8 +8130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4098981846209416789
 CanvasRenderer:
@@ -9628,6 +9632,7 @@ MonoBehaviour:
   Level: {fileID: 0}
   explain: {fileID: 0}
   icon: {fileID: 0}
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
 --- !u!225 &4098981847615752673
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -12293,6 +12298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInit: 0
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
 --- !u!1 &8091932958517822459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13438,8 +13444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7909788826371919668
 CanvasRenderer:
@@ -20312,6 +20318,7 @@ MonoBehaviour:
   grade: 0
   icon: {fileID: 0}
   spirte: {fileID: 0}
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
   takeOnEquip: {fileID: 0}
   takeOffEquip: {fileID: 0}
   changeEquip: {fileID: 0}

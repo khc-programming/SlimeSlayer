@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1500271661302875624
 CanvasRenderer:
@@ -7376,6 +7376,7 @@ MonoBehaviour:
     spawnID: 0
     hp: 0
     currHp: 0
+    lastState: 000000000000000000000000
     uniqueID: 0
     tableID: 0
     grade: 0
@@ -7390,11 +7391,11 @@ MonoBehaviour:
     G: 0
     B: 0
     A: 0
-    maxAttack: 0
+    basicAttack: 0
     attack: 0
-    maxDefence: 0
+    basicDefence: 0
     defence: 0
-    maxHp: 0
+    basicHp: 0
     explain: 
     name: 
     wearFull: 
@@ -7420,6 +7421,7 @@ MonoBehaviour:
   grade: 0
   icon: {fileID: 0}
   spirte: {fileID: 0}
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
   takeOnEquip: {fileID: 0}
   takeOffEquip: {fileID: 0}
   changeEquip: {fileID: 0}
@@ -9025,8 +9027,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 30, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1500271663204016231
 CanvasRenderer:
@@ -9404,6 +9406,7 @@ MonoBehaviour:
     spawnID: 0
     hp: 0
     currHp: 0
+    lastState: 000000000000000000000000
     uniqueID: 0
     tableID: 0
     grade: 0
@@ -9413,22 +9416,27 @@ MonoBehaviour:
     checkbox: 0
     jobType: 0
     equipItemArray: 000000000000000000000000
-    isUpdate: 0
+    skillList: []
+    skillPoint: 0
+    isSkill1: 1
+    isSkill2: 1
+    isSkill3: 1
     job: 0
     jobBit: 0
     iconCount: 0
     sprite: {fileID: 0}
-    maxAttack: 0
+    basicAttack: 0
     attack: 0
-    maxDefence: 0
+    basicDefence: 0
     defence: 0
-    maxHp: 0
+    basicHp: 0
     speed: 0
     currSpeed: 0
     weaponObj:
       spawnID: 0
       hp: 0
       currHp: 0
+      lastState: 000000000000000000000000
       uniqueID: 0
       tableID: 0
       grade: 0
@@ -9443,11 +9451,11 @@ MonoBehaviour:
       G: 0
       B: 0
       A: 0
-      maxAttack: 0
+      basicAttack: 0
       attack: 0
-      maxDefence: 0
+      basicDefence: 0
       defence: 0
-      maxHp: 0
+      basicHp: 0
       explain: 
       name: 
       wearFull: 
@@ -9459,6 +9467,7 @@ MonoBehaviour:
       spawnID: 0
       hp: 0
       currHp: 0
+      lastState: 000000000000000000000000
       uniqueID: 0
       tableID: 0
       grade: 0
@@ -9473,11 +9482,11 @@ MonoBehaviour:
       G: 0
       B: 0
       A: 0
-      maxAttack: 0
+      basicAttack: 0
       attack: 0
-      maxDefence: 0
+      basicDefence: 0
       defence: 0
-      maxHp: 0
+      basicHp: 0
       explain: 
       name: 
       wearFull: 
@@ -9489,6 +9498,7 @@ MonoBehaviour:
       spawnID: 0
       hp: 0
       currHp: 0
+      lastState: 000000000000000000000000
       uniqueID: 0
       tableID: 0
       grade: 0
@@ -9503,11 +9513,11 @@ MonoBehaviour:
       G: 0
       B: 0
       A: 0
-      maxAttack: 0
+      basicAttack: 0
       attack: 0
-      maxDefence: 0
+      basicDefence: 0
       defence: 0
-      maxHp: 0
+      basicHp: 0
       explain: 
       name: 
       wearFull: 
@@ -9520,7 +9530,6 @@ MonoBehaviour:
     itemAttack: 0
     itemDefence: 0
     itemHP: 0
-    lastState: 000000000000000000000000
     model: 
     weaponID: 4
     price: 0
@@ -9542,6 +9551,7 @@ MonoBehaviour:
   upHp: {fileID: 0}
   upPrice: {fileID: 0}
   upGamble: {fileID: 0}
+  maxColor: {r: 0.2, g: 0.8, b: 0.4, a: 1}
   takeOnEquip: {fileID: 0}
   takeOnBuy: {fileID: 0}
   takeOnSell: {fileID: 0}

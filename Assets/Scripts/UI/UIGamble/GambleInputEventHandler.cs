@@ -140,6 +140,7 @@ public class GambleInputEventHandler : MonoBehaviour
         }
 
         charGamblePopup.SetGambleCharInfo(tempList);
+        ani.SetTrigger("Idle");
     }
 
     public void CallCharBtn10()
