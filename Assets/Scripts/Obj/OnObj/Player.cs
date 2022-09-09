@@ -325,10 +325,10 @@ public override void SetDamage(int attack)
 
         
 
-        if (Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster")))
-        //if (Physics2D.CircleCast(temp, 0.2f,
-        //           dir, 0.001f, 1 << LayerMask.NameToLayer("Monster")))
-        {
+        //if (Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster") | 1 << LayerMask.NameToLayer("OutWall") 
+        //    | 1 << LayerMask.NameToLayer("InWall") | 1 << LayerMask.NameToLayer("Utile") | 1 << LayerMask.NameToLayer("NPC")))
+            if (Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster")))
+            {
             
             Vector2 v = dir * playerInfo.currSpeed;
             getModel.Move(v, true);
@@ -447,21 +447,7 @@ public override void SetDamage(int attack)
 
             }
         }
-        //else
-        //{
-
-        //    Vector3 dir = path.path[0].transform.position - transform.position;
-        //    dir.Normalize();
-        //    charDir(dir);
-
-        //    getModel.getAnimator.SetBool("Move", true);
-        //    transform.position = Vector3.MoveTowards(transform.position,
-        //                                                                            path.path[0].transform.position,
-        //                                                                            playerInfo.currSpeed * Time.deltaTime);
-
-        //    if (Vector3.Distance(transform.position, path.path[0].transform.position) < 0.01f)
-        //        path.path.RemoveAt(0);
-        //}
+       
     }
 
     public override void Skill1()

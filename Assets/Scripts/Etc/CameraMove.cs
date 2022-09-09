@@ -7,7 +7,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField]
     private Transform target;
     [SerializeField]
-    private float speed = 3;
+    private float speed = 8f;
 
     public Transform setTarget
     {
@@ -65,13 +65,15 @@ public class CameraMove : MonoBehaviour
     {
         if (target == null)
             return;
+
+        Vector3 tempPos = new Vector3(target.position.x, target.position.y, -10f);
+        transform.position = Vector3.Lerp(transform.position, tempPos, Time.deltaTime * speed);
         
-        transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+
+        
+        
     }
 
-    private void LateUpdate()
-    {
-        
-    }
+   
+
 }

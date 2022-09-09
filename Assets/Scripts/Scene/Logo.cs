@@ -6,8 +6,8 @@ public class Logo : MonoBehaviour
 {
     private void Awake()
     {
-       // Screen.sleepTimeout = SleepTimeout.NeverSleep;
-      // SetResolution();
+        //Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        //SetResolution();
     }
     void Start()
     {
@@ -22,7 +22,7 @@ public class Logo : MonoBehaviour
         int setWidth = 1080;
         int setHeight = 1920;
 
-        Screen.SetResolution(setWidth,setHeight, false);
+        Screen.SetResolution(setWidth,setHeight, true);
 
     }
     // Update is called once per frame

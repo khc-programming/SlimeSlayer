@@ -94,23 +94,20 @@ public class Model : MonoBehaviour
 
         if(colliderChek == false)
         {
-            rigid2D.velocity = velocity;
+            
+            transform.Translate(velocity.normalized * velocity.magnitude * Time.deltaTime);
+            
+            //Vector3 v = velocity.normalized;
+            //v += transform.position;
+            //transform.position = Vector3.MoveTowards(transform.position, v,
+            //                                                 velocity.magnitude * Time.deltaTime);
         }
         else
         {
             rigid2D.velocity = Vector2.zero;
         }
 
-        //    if (Physics2D.CircleCast(target.getCenter.position, 0.4f,
-        //            velocity.normalized, 0.4f, 1 << LayerMask.NameToLayer("Monster")))
-        //{
-
-        //    rigid2D.velocity = Vector2.zero;
-        //}
-        //else
-        //{
-        //    rigid2D.velocity = velocity;
-        //}
+        
         
 
     }

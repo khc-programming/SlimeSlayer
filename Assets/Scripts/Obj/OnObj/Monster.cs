@@ -160,7 +160,7 @@ public class Monster : Unit
             monsterInfo.lastState[0] = monsterInfo.attack + 300;
         }
 
-        monsterInfo.currSpeed = 2f * monsterInfo.speed;
+        monsterInfo.currSpeed = 3f * monsterInfo.speed;
 
    
     }
@@ -211,13 +211,13 @@ public class Monster : Unit
 
 
 
-        if (getModel.IsTag("Damage"))
-        {
+        //if (getModel.IsTag("Damage"))
+        //{
 
-            return;
-        }
+        //    return;
+        //}
 
-        damageElap = 0;
+        //damageElap = 0;
         int damage = monsterInfo.lastState[1] - attack;
         if (damage < 0)
         {

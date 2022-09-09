@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-//public class Quest
-//{
-//    public string name;
-//    public int level;
-//    public int count;
-//}
+
 public static class GameDB 
 {
 
@@ -130,7 +125,7 @@ public static class GameDB
        
         info.attack = (int)((info.basicAttack * 9) + (info.basicAttack * info.level));
         info.defence = (int)((info.basicDefence * 9) + (info.basicDefence * info.level));
-        info.currSpeed = 2f * info.speed;
+        info.currSpeed = 3f * info.speed;
 
         
         charDicAll.Add(tableID,info);
@@ -249,7 +244,7 @@ public static class GameDB
 
         player.attack = (int)((player.basicAttack * 9) + (player.basicAttack * player.level));
         player.defence = (int)((player.basicDefence * 9) + (player.basicDefence * player.level));
-        player.currSpeed = 2f * player.speed;
+        player.currSpeed = 3f * player.speed;
 
         
         player.weaponObj =  GetItem(player.equipItemArray[0]);
@@ -899,6 +894,7 @@ public static void SetItemInfoUpdate(int uniqueID)
         userInfo.money = GameDB.money;
 
         string json = JsonConvert.ToJson<UserInfo>(userInfo, true);
+        Debug.Log(filename);
         WriteFile(GetPath(filename), json);
     }
 

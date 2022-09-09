@@ -20,11 +20,12 @@ public class UISkillBox : BaseUI
     float scrollHeight;
     int itemCount = 0;
 
+    public Image popupShield;
+
     
     private float opset = 0;
 
     // Start is called before the first frame update
-
 
 
     public void SetUpdate()
@@ -210,6 +211,10 @@ public class UISkillBox : BaseUI
 
     }
 
+    public void PopupSet(bool path)
+    {
+        popupShield.gameObject.SetActive(path);
+    }
 
     #region //추상 함수 정의부
 
@@ -222,6 +227,9 @@ public class UISkillBox : BaseUI
         skillContent = Resources.Load<UISkillContent>("Prefab/UI/UISkillContent");
 
         skillPointText = UtilHelper.Find<TMP_Text>(transform, "UISkillPoint/SkillPoint");
+
+        popupShield = UtilHelper.Find<Image>(transform, "Background/PopupShield");
+        popupShield.gameObject.SetActive(false);
 
         CreateItem();
         SetSkillList();

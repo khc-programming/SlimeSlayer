@@ -122,12 +122,14 @@ public class EquInputEventHandler : MonoBehaviour
             if (rect != null) rect.pivot = new Vector2(0, 0);
         }
         isSkillPopMove = true;
+        skillBox.PopupSet(true);
         skillPopup.Open(info);
     }
 
     public void PointerExit(SaveSkill info)
     {
         isSkillPopMove = false;
+        skillBox.PopupSet(false);
         skillPopup.Close();
     }
 
@@ -145,6 +147,7 @@ public class EquInputEventHandler : MonoBehaviour
     public void SkillOffBtnOnClick()
     {
         skillBox.gameObject.SetActive(false);
+        skillBox.PopupSet(false);
     }
 
     //
