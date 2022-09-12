@@ -1,6 +1,6 @@
 {
-    "uniqueCount": 501,
-    "money": 10000,
+    "uniqueCount": 507,
+    "money": 507000,
     "charUniqueID": 500,
     "jobType": 1,
     "listOfChar": [
@@ -44,8 +44,157 @@
             "isSkill1": true,
             "isSkill2": true,
             "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 680,
+            "currHp": 680,
+            "lastState": [
+                34,
+                0,
+                680
+            ],
+            "uniqueID": 506,
+            "tableID": 1,
+            "grade": 1,
+            "level": 25,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 24,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
+        },
+        {
+            "spawnID": 0,
+            "hp": 200,
+            "currHp": 200,
+            "lastState": [
+                10,
+                0,
+                200
+            ],
+            "uniqueID": 502,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false,
+            "jobType": 1,
+            "equipItemArray": [
+                0,
+                0,
+                0
+            ],
+            "skillList": [
+                {
+                    "level": 1,
+                    "tableID": 8
+                },
+                {
+                    "level": 0,
+                    "tableID": 9
+                },
+                {
+                    "level": 0,
+                    "tableID": 10
+                }
+            ],
+            "skillPoint": 0,
+            "isSkill1": true,
+            "isSkill2": true,
+            "isSkill3": true
         }
     ],
-    "listOfItems": [],
-    "listOfQuests": []
+    "listOfItems": [
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 503,
+            "tableID": 1,
+            "grade": 1,
+            "level": 1,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        },
+        {
+            "spawnID": 0,
+            "hp": 0,
+            "currHp": 0,
+            "lastState": [
+                0,
+                0,
+                0
+            ],
+            "uniqueID": 505,
+            "tableID": 3,
+            "grade": 3,
+            "level": 25,
+            "equip": false,
+            "equipCharacter": 0,
+            "checkbox": false
+        }
+    ],
+    "listOfQuests": [
+        {
+            "NPCNAME": "ShopMan",
+            "LEVEL": 1,
+            "shopCount": [
+                {
+                    "tableID": 10100,
+                    "level": 0,
+                    "count": 2
+                },
+                {
+                    "tableID": 12201,
+                    "level": 0,
+                    "count": 1
+                },
+                {
+                    "tableID": 20100,
+                    "level": 0,
+                    "count": 2
+                },
+                {
+                    "tableID": 22201,
+                    "level": 0,
+                    "count": 1
+                }
+            ],
+            "upgradeCount": [],
+            "gambleCount": [],
+            "huntCount": [],
+            "questState": 2,
+            "questDialogMode": 2
+        }
+    ]
 }

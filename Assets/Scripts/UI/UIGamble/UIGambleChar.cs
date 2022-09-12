@@ -4,79 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIGambleChar : BaseUI, IPointerEnterHandler, IPointerExitHandler 
+public class UIGambleChar : BaseUI
 {
     PlayerInfo playerInfo;
-    
-    
-    
-    
+
+    UISlectCharSlot selectCharSlot;
+
+
+   
     private Image icon;
-    private Button button;
+   
     private List<Image> star = new List<Image>();
     private int grade;
 
     
-    private System.Action onClickDelegate;
+
 
     
-    private System.Action<PlayerInfo> pointerEnterDelegate;
-
     
-    private System.Action<PlayerInfo> pointerExitDelegate;
 
-    public void SetOnClickDelegate(System.Action function)
-    {
-        onClickDelegate = function;
-    }
-
+   
     public void SetPointerEnterDelegate(System.Action<PlayerInfo> function)
     {
-        pointerEnterDelegate = function;
+        if(selectCharSlot != null) selectCharSlot.SetPointerEnterDelegate(function);
     }
 
     public void SetPointerExitDelegate(System.Action<PlayerInfo> function)
     {
-        pointerExitDelegate = function;
-    }
-
-    public void OnClick()
-    {
-        if (pointerEnterDelegate != null)
-        {
-            onClickDelegate();
-                
-        }
-    }
-
-    public void PointerEnter()
-    {
-        if (onClickDelegate != null)
-        {
-            if (playerInfo != null)
-                pointerEnterDelegate(playerInfo);
-        }
-    }
-
-    public void PointerExit()
-    {
-        if (pointerExitDelegate != null)
-        {
-            if (playerInfo != null)
-                pointerExitDelegate(playerInfo);
-        }
+        if(selectCharSlot != null) selectCharSlot.SetPointerExitDelegate(function);
     }
 
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        PointerEnter();
-    }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        PointerExit();
-    }
 
 
     public void SetInfo(PlayerInfo info)
@@ -86,6 +45,8 @@ public class UIGambleChar : BaseUI, IPointerEnterHandler, IPointerExitHandler
         // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
         if (info != null)
         {
+
+            if (selectCharSlot != null) selectCharSlot.SetInfo(info);
 
             //아이템 아이콘 설정
             if (icon != null)
@@ -115,6 +76,12 @@ public class UIGambleChar : BaseUI, IPointerEnterHandler, IPointerExitHandler
 
     }
 
+    public void SetRayCast(bool path, PlayerInfo charPivot = null)
+    {
+        if (selectCharSlot != null ) selectCharSlot.SetRayCast(path,charPivot);
+    }
+
+
     #region //추상 함수 정의부
 
     public override void Init()
@@ -122,13 +89,11 @@ public class UIGambleChar : BaseUI, IPointerEnterHandler, IPointerExitHandler
         
         icon = UtilHelper.Find<Image>(transform, "Icon", false, true);
         star.AddRange(UtilHelper.FindAll<Image>(transform, "Grade", false, true));
-        button = GetComponent<Button>();
-        if (button != null)
-        {
-            button.onClick.AddListener(OnClick);
-            button.interactable = false;
-        }
-            
+       
+        
+
+        selectCharSlot = GetComponentInChildren<UISlectCharSlot>(true);
+        selectCharSlot.Init();
 
         gameObject.SetActive(false);
     }

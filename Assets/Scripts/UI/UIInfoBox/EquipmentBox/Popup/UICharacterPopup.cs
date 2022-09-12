@@ -374,6 +374,7 @@ public class UICharacterPopup : BaseUI
 
         playerInfo = null;
         gameObject.SetActive(false);
+        
     }
 
 }

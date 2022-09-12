@@ -55,6 +55,18 @@ public class UICharGamblePopup : BaseUI
         }
     }
 
+
+    public void SetRayCastAll(bool path, PlayerInfo charPivot = null)
+    {
+
+
+        foreach (var value in gambleCharList)
+        {
+            value.SetRayCast(path, charPivot);
+        }
+
+    }
+
     #region //추상 함수 정의부
 
 
@@ -67,14 +79,14 @@ public class UICharGamblePopup : BaseUI
 
         {
             button.onClick.AddListener(OnClick);
-            //button.onClick.AddListener(Close);
+            
         }
             
 
         foreach(var value in gambleCharList)
         {
             value.Init();
-            value.SetOnClickDelegate(OnClick);
+            
         }
     }
 

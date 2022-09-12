@@ -4,38 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UISkillSlot : BaseUI, IPointerEnterHandler, IPointerExitHandler
+public class UISlectItemSlot : BaseUI, IPointerEnterHandler, IPointerExitHandler
 {
-    SaveSkill skillInfo;
+    ItemInfo itemInfo;
     Image slotImage;
-    
-
-    private System.Action<SaveSkill> pointerEnterDelegate;
-
-    private System.Action<SaveSkill> pointerExitDelegate;
 
 
-   
+    private System.Action<ItemInfo> pointerEnterDelegate;
 
-    public void SetPointerEnterDelegate(System.Action<SaveSkill> function)
+    private System.Action<ItemInfo> pointerExitDelegate;
+
+
+
+
+    public void SetPointerEnterDelegate(System.Action<ItemInfo> function)
     {
         pointerEnterDelegate = function;
     }
 
-    public void SetPointerExitDelegate(System.Action<SaveSkill> function)
+    public void SetPointerExitDelegate(System.Action<ItemInfo> function)
     {
         pointerExitDelegate = function;
     }
 
 
-    
+
 
     public void PointerEnter()
     {
         if (pointerEnterDelegate != null)
         {
-            if (skillInfo != null)
-                pointerEnterDelegate(skillInfo);
+            if (itemInfo != null)
+                pointerEnterDelegate(itemInfo);
         }
     }
 
@@ -43,37 +43,40 @@ public class UISkillSlot : BaseUI, IPointerEnterHandler, IPointerExitHandler
     {
         if (pointerExitDelegate != null)
         {
-            if (skillInfo != null)
-                pointerExitDelegate(skillInfo);
+            if (itemInfo != null)
+                pointerExitDelegate(itemInfo);
         }
     }
 
 
-    
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
-        EquInputEventHandler.skillSlotPivot.x = transform.position.x;
-        EquInputEventHandler.skillSlotPivot.y = transform.position.y;
+
+        GambleInputEventHandler.gamblePivot.x = transform.position.x;
+        GambleInputEventHandler.gamblePivot.y = transform.position.y;
         PointerEnter();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        GambleInputEventHandler.gamblePivot = Vector2.zero;
         
         PointerExit();
     }
 
 
-    public void SetInfo(SaveSkill info)
+    public void SetInfo(ItemInfo info)
     {
-        skillInfo = info;
+        itemInfo = info;
 
     }
 
-    public void SetRayCast(bool path,SaveSkill saveSkill = null)
+    public void SetRayCast(bool path, ItemInfo saveInfo = null)
     {
-        if (slotImage != null && saveSkill != skillInfo) slotImage.raycastTarget = path;
+        
+        
+        if (slotImage != null && itemInfo != saveInfo) slotImage.raycastTarget = path;
     }
 
     #region //추상 함수 정의부

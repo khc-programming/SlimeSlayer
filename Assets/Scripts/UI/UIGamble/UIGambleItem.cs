@@ -4,79 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIGambleItem : BaseUI, IPointerEnterHandler, IPointerExitHandler
+public class UIGambleItem : BaseUI
 {
     ItemInfo itemInfo;
 
 
 
 
+    UISlectItemSlot selectItemSlot;
+
     private Image icon;
-    private Button button;
+    
     private List<Image> star = new List<Image>();
     private int grade;
 
 
-    private System.Action onClickDelegate;
+    
 
-
-    private System.Action<ItemInfo> pointerEnterDelegate;
-
-
-    private System.Action<ItemInfo> pointerExitDelegate;
-
-    public void SetOnClickDelegate(System.Action function)
-    {
-        onClickDelegate = function;
-    }
-
+    
     public void SetPointerEnterDelegate(System.Action<ItemInfo> function)
     {
-        pointerEnterDelegate = function;
+        if (selectItemSlot != null) selectItemSlot.SetPointerEnterDelegate(function);
     }
 
     public void SetPointerExitDelegate(System.Action<ItemInfo> function)
     {
-        pointerExitDelegate = function;
+        if (selectItemSlot != null) selectItemSlot.SetPointerExitDelegate(function);
     }
 
-    public void OnClick()
-    {
-        if (pointerEnterDelegate != null)
-        {
-            onClickDelegate();
-            
-        }
-    }
+    
 
-    public void PointerEnter()
-    {
-        if (onClickDelegate != null)
-        {
-            if (itemInfo != null)
-                pointerEnterDelegate(itemInfo);
-        }
-    }
-
-    public void PointerExit()
-    {
-        if (pointerExitDelegate != null)
-        {
-            if (itemInfo != null)
-                pointerExitDelegate(itemInfo);
-        }
-    }
-
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        PointerEnter();
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        PointerExit();
-    }
+  
 
 
     public void SetInfo(ItemInfo info)
@@ -86,6 +44,8 @@ public class UIGambleItem : BaseUI, IPointerEnterHandler, IPointerExitHandler
         // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
         if (info != null)
         {
+
+            if (selectItemSlot != null) selectItemSlot.SetInfo(info);
 
             //아이템 아이콘 설정
             if (icon != null)
@@ -115,6 +75,11 @@ public class UIGambleItem : BaseUI, IPointerEnterHandler, IPointerExitHandler
 
     }
 
+    public void SetRayCast(bool path, ItemInfo itemPivot = null)
+    {
+        if (selectItemSlot != null) selectItemSlot.SetRayCast(path, itemPivot);
+    }
+
     #region //추상 함수 정의부
 
     public override void Init()
@@ -122,13 +87,12 @@ public class UIGambleItem : BaseUI, IPointerEnterHandler, IPointerExitHandler
 
         icon = UtilHelper.Find<Image>(transform, "Icon", false, true);
         star.AddRange(UtilHelper.FindAll<Image>(transform, "Grade", false, true));
-        button = GetComponent<Button>();
-        if (button != null)
-        {
-            button.onClick.AddListener(OnClick);
-            button.interactable = false;
-        }
-            
+
+
+        selectItemSlot = GetComponentInChildren<UISlectItemSlot>(true);
+        selectItemSlot.Init();
+
+
 
         Close();
         

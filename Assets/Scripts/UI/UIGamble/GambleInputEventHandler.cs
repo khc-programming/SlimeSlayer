@@ -33,7 +33,9 @@ public class GambleInputEventHandler : MonoBehaviour
 
     private bool isCoroutine = false;
 
-    public Vector2 v;
+    //public Vector2 v;
+
+    public static Vector2 gamblePivot = Vector2.zero;
 
     public void Init()
     {
@@ -90,6 +92,7 @@ public class GambleInputEventHandler : MonoBehaviour
 
     public void PointerEnter(PlayerInfo info)
     {
+        
         charPopup.transform.position = Input.mousePosition;
         float halfWidth = Screen.width * 0.5f;
         if (charPopup.transform.position.x > halfWidth)
@@ -102,12 +105,15 @@ public class GambleInputEventHandler : MonoBehaviour
             RectTransform rect = charPopup.GetComponent<RectTransform>();
             if (rect != null) rect.pivot = new Vector2(0, 1);
         }
+
+        charGamblePopup.SetRayCastAll(false, info);
         isCharPopMove = true;
         charPopup.Open(info);
     }
 
     public void PointerExit(PlayerInfo info)
     {
+        charGamblePopup.SetRayCastAll(true);
         isCharPopMove = false;
         charPopup.GambleClose();
     }
@@ -116,8 +122,9 @@ public class GambleInputEventHandler : MonoBehaviour
     {
         isCharPopMove = false;
         AudioMng.Instance.PlayUI("UI_Exit");
+        charGamblePopup.SetRayCastAll(true);
         charPopup.GambleClose();
-       
+
     }
 
     public void CallCharBtn1()
@@ -270,12 +277,15 @@ public class GambleInputEventHandler : MonoBehaviour
             RectTransform rect = itemPopup.GetComponent<RectTransform>();
             if (rect != null) rect.pivot = new Vector2(0, 1);
         }
+
+        itemGamblePopup.SetRayCastAll(false, info);
         isItemPopMove = true;
         itemPopup.Open(info);
     }
 
     public void PointerExit(ItemInfo info)
     {
+        itemGamblePopup.SetRayCastAll(true);
         isItemPopMove = false;
         itemPopup.GambleClose();
     }
@@ -284,6 +294,7 @@ public class GambleInputEventHandler : MonoBehaviour
     {
         isItemPopMove = false;
         AudioMng.Instance.PlayUI("UI_Exit");
+        itemGamblePopup.SetRayCastAll(true);
         itemPopup.GambleClose();
     }
 
@@ -402,9 +413,13 @@ public class GambleInputEventHandler : MonoBehaviour
     public void Run()
     {
         if(isCharPopMove)
-            charPopup.transform.position = Input.mousePosition;
+            if (Input.mousePosition.x >= gamblePivot.x && Input.mousePosition.x <= (gamblePivot.x + 200) &&
+               Input.mousePosition.y >= gamblePivot.y && Input.mousePosition.y <= (gamblePivot.y + 200))
+                charPopup.transform.position = Input.mousePosition;
         if(isItemPopMove)
-            itemPopup.transform.position = Input.mousePosition;
+            if (Input.mousePosition.x >= gamblePivot.x && Input.mousePosition.x <= (gamblePivot.x + 200) &&
+               Input.mousePosition.y >= gamblePivot.y && Input.mousePosition.y <= (gamblePivot.y + 200))
+                itemPopup.transform.position = Input.mousePosition;
 
     }
 

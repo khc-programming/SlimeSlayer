@@ -22,8 +22,32 @@ public class UISkillBox : BaseUI
 
     public Image popupShield;
 
+
     
     private float opset = 0;
+
+
+    public void SetRayCastAll(bool path, SaveSkill saveSkill = null)
+    {
+
+        
+            foreach (var value in skillContentList)
+            {
+                value.SetRayCast(path , saveSkill);
+            }
+        
+    }
+
+    public void SetTabGuardtAll(bool path)
+    {
+
+
+        foreach (var value in skillContentList)
+        {
+            value.SetTabGuard(path);
+        }
+
+    }
 
     // Start is called before the first frame update
 
@@ -214,6 +238,7 @@ public class UISkillBox : BaseUI
     public void PopupSet(bool path)
     {
         popupShield.gameObject.SetActive(path);
+        scroll.vertical = !path;
     }
 
     #region //추상 함수 정의부

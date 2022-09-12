@@ -13,6 +13,7 @@ public class UISkillContent : BaseUI
 
     Image iconImage;
     Image shadow;
+    Image tabGuard;
 
     Button skillUp;
     Button skillOpen;
@@ -239,24 +240,32 @@ public class UISkillContent : BaseUI
         //SetUpdate();
     }
 
-    public void SetUpdate()
+    public void SetRayCast(bool path, SaveSkill saveSkill = null)
     {
-
+        if (skillSolot != null) skillSolot.SetRayCast(path, saveSkill);
     }
+
+    public void SetTabGuard(bool path)
+    {
+        if (tabGuard != null) tabGuard.gameObject.SetActive(path);
+    }
+
 
     #region //추상 함수 정의부
 
     public override void Init()
     {
         skillSolot = GetComponentInChildren<UISkillSlot>(true);
+        skillSolot.Init();
 
         skillName = UtilHelper.Find<TMP_Text>(transform, "Name");
         skillLevel = UtilHelper.Find<TMP_Text>(transform, "LevelText");
 
         iconImage = UtilHelper.Find<Image>(transform, "Icon");
         shadow = UtilHelper.Find<Image>(transform, "Shadow");
+        tabGuard = UtilHelper.Find<Image>(transform, "TabGuard", false, false);
 
-        
+
         skillUp = UtilHelper.FindButton(transform, "SkillUp", SkillUpOnClick);
         skillOpen = UtilHelper.FindButton(transform, "SkillOpen", SkillOpenOnClick);
         skillClose = UtilHelper.FindButton(transform, "SkillClose", SkillCloseOnClick);

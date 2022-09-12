@@ -22,12 +22,16 @@ public class EquInputEventHandler : MonoBehaviour
 
     UISkillBox skillBox;
 
+    public static Vector2 skillSlotPivot = Vector2.zero;
+
     public bool isSkillPopMove = false;
 
     Button skillOnBtn;
     Button skillOffBtn;
 
     UISkillPop skillPopup;
+
+    
 
     public void Init()
     {
@@ -109,6 +113,9 @@ public class EquInputEventHandler : MonoBehaviour
 
     public void PointerEnter(SaveSkill info)
     {
+        //if (currSkill != null || currSkill != info)
+        //    return;
+
         skillPopup.transform.position = Input.mousePosition;
         float halfHeigh = Screen.height * 0.5f;
         if (charPopup.transform.position.y > halfHeigh)
@@ -122,12 +129,21 @@ public class EquInputEventHandler : MonoBehaviour
             if (rect != null) rect.pivot = new Vector2(0, 0);
         }
         isSkillPopMove = true;
+        skillBox.SetRayCastAll(false, info);
+        skillBox.SetTabGuardtAll(true);
         skillBox.PopupSet(true);
         skillPopup.Open(info);
     }
 
     public void PointerExit(SaveSkill info)
     {
+        //if (currSkill != info)
+        //    return;
+
+        //skillSlotPivot = Vector2.zero;
+
+        skillBox.SetRayCastAll(true);
+        skillBox.SetTabGuardtAll(false);
         isSkillPopMove = false;
         skillBox.PopupSet(false);
         skillPopup.Close();
@@ -501,9 +517,15 @@ public class EquInputEventHandler : MonoBehaviour
 
     public void Run()
     {
+
         if (skillPopup != null && isSkillPopMove == true)
-            skillPopup.transform.position = Input.mousePosition;
-       
+            if (Input.mousePosition.x >= skillSlotPivot.x && Input.mousePosition.x <= (skillSlotPivot.x + 200) &&
+                Input.mousePosition.y >= skillSlotPivot.y && Input.mousePosition.y <= (skillSlotPivot.y + 200))
+                skillPopup.transform.position = Input.mousePosition;
+
+        //if (skillPopup != null && isSkillPopMove == true)
+        //        skillPopup.transform.position = Input.mousePosition;
+
 
     }
 

@@ -52,6 +52,18 @@ public class UIItemGamblePopup : BaseUI
         }
     }
 
+
+    public void SetRayCastAll(bool path, ItemInfo itemPivot = null)
+    {
+
+
+        foreach (var value in gambleItemList)
+        {
+            value.SetRayCast(path, itemPivot);
+        }
+
+    }
+
     #region //추상 함수 정의부
 
 
@@ -70,7 +82,7 @@ public class UIItemGamblePopup : BaseUI
         foreach (var value in gambleItemList)
         {
             value.Init();
-            value.SetOnClickDelegate(OnClick);
+           
             
         }
     }
