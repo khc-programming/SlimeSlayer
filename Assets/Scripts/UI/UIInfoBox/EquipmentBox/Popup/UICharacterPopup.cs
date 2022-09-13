@@ -31,29 +31,22 @@ public class UICharacterPopup : BaseUI
     public Color maxColor = new Color(0.2f, 0.8f, 0.4f);
 
 
-    // 착용버튼
+   
     public Button takeOnEquip;
 
-    // 구매버튼
+
     public Button takeOnBuy;
 
-    // 판매버튼
+  
     public Button takeOnSell;
 
-    // 업그레이드 버튼
+  
     public Button takeOnUpgrade;
 
 
-    // 착용시 호출될 델리게이트
     private System.Action<PlayerInfo> onEquipDelegate;
-
-    // 구매시 호출될 델리게이트
     private System.Action<PlayerInfo> onBuyDelegate;
-
-    // 판매시 호출될 델리게이트
     private System.Action<PlayerInfo> onSellDelegate;
-
-    // 강화시 호출될 델리게이트
     private System.Action<PlayerInfo> onUpgradeDelegate;
 
 
@@ -206,7 +199,7 @@ public class UICharacterPopup : BaseUI
             SetActive(true);
     }
 
-    // 착용 버튼을 클릭하였을때 외부의 착용 코드를 실행합니다.
+   
     public void OnClickEquip()
     {
         if (onEquipDelegate != null)
@@ -216,7 +209,7 @@ public class UICharacterPopup : BaseUI
         }
     }
 
-    //  구매 버튼을 클릭하였을때 
+  
     public void OnClickBuy()
     {
         if (onBuyDelegate != null)
@@ -226,7 +219,7 @@ public class UICharacterPopup : BaseUI
         }
     }
 
-    // 판매 버튼을 클릭하였을때 
+   
     public void OnClickSell()
     {
         if (onSellDelegate != null)
@@ -246,7 +239,7 @@ public class UICharacterPopup : BaseUI
     }
 
 
-    // 착용시 호출될 함수 설정
+  
     public void SetOnEquipDelegate(System.Action<PlayerInfo> function)
     {
         onEquipDelegate = function;
@@ -257,7 +250,7 @@ public class UICharacterPopup : BaseUI
         onBuyDelegate = function;
     }
 
-    // 아이템 교체시 호출될 함수 설정
+    
     public void SetOnSellDelegate(System.Action<PlayerInfo> function)
     {
         onSellDelegate = function;

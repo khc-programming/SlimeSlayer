@@ -22,6 +22,5 @@ public class CharacterPopupExit : MonoBehaviour, IPointerDownHandler, IPointerUp
         
     }
 
-    // Update is called once per frame
 
 }

@@ -7,26 +7,6 @@ using UnityEngine.AI;
 [System.Serializable]
 public class PlayerInfo : SaveCharacter
 {
-    /*
-    
-    - shareInfo -
-    public int spawnID;
-    public int hp;
-    public int currHp; 
-      
-    - saveInfo -
-    public int uniqueID;
-    public int tableID;
-    public int grade;
-    public int level;
-    public bool equip;
-    public int equipCharacter;
-
-    - characterSaveInfo -
-    public int jobType;
-    public int[] equipItemArray 
-
-     */
 
     private bool isUpdate = false;
     public bool IsUpdate
@@ -74,8 +54,7 @@ public class PlayerInfo : SaveCharacter
 [RequireComponent(typeof(AIPath2D))]
 public class Player : Unit
 {
-    //public List<Weapon> weapons;
-    //public Weapon weapon;
+ 
     public AIPath2D path;
 
     // 길찾기 변수 목록
@@ -92,10 +71,7 @@ public class Player : Unit
     public List<Weapon> weapons;
     public Weapon weapon;
 
-    //public SpriteRenderer characterSprite;
-    
-
-
+  
 
 
     [SerializeField]
@@ -120,9 +96,6 @@ public class Player : Unit
         playerInfo.spawnID = spawnID;
         playerInfo.tableID = tableID;
         playerInfo.model = DataManager.ToS(TableType.PLAYERTABLE, tableID, "MODEL");
-
-
-       // GameDB.SetCharInfoUpdate(playerInfo.uniqueID);
     }
 
 
@@ -143,7 +116,7 @@ public class Player : Unit
         path = GetComponent<AIPath2D>();
         if (path != null) path.Init();
 
-        //characterSprite = UtilHelper.Find<SpriteRenderer>(transform, "root");
+        
 
 
         weapons.AddRange(GetComponentsInChildren<Weapon>(true));
@@ -157,8 +130,6 @@ public class Player : Unit
             }
         }
 
-        //playerInfo = GameDB.GetChar(GameDB.userInfo.charUniqueID);
-        //GameDB.SetCharInfoUpdate(playerInfo.uniqueID);
         
         gameObject.layer = (int)unitType;
         gameObject.tag = unitType.ToString();
@@ -183,39 +154,6 @@ public class Player : Unit
         get { return playerInfo; }
         
     }
-
-//    public void SetPlayer(PlayerInfo info)
-//    {
-//        //playerInfo.isUpdate = true;
-//        playerInfo.job = info.job;
-//        playerInfo.jobBit = info.jobBit;
-//        playerInfo.iconCount = info.iconCount;
-//        playerInfo.sprite = info.sprite;
-
-//        playerInfo.maxAttack = info.maxAttack;
-//        playerInfo.attack = info.attack;
-//        playerInfo.maxDefence = info.maxDefence;
-//        playerInfo.defence = info.defence;
-//        playerInfo.maxHp = info.maxHp;
-//        playerInfo.speed = info.speed;
-//        playerInfo.currSpeed = info.currSpeed;
-
-//        playerInfo.weaponObj = info.weaponObj;
-//        playerInfo.shieldObj = info.shieldObj;
-//        playerInfo.petObj = info.petObj;
-
-//        playerInfo.explain = info.explain;
-//        playerInfo.name = info.name;
-
-//        playerInfo.itemAttack = info.itemAttack;
-//        playerInfo.itemDefence = info.itemDefence;
-//        playerInfo.itemHP = info.itemHP;
-
-//        playerInfo.lastState[0] = info.lastState[0];
-//        playerInfo.lastState[1] = info.lastState[1];
-//        playerInfo.lastState[2] = info.lastState[2];
-
-//}
 
 
     public void changeHpBar()
@@ -272,7 +210,7 @@ public override void SetDamage(int attack)
 
             if (getModel.getColl2D != null)
                 getModel.getColl2D.enabled = false;
-            // NewMonster컴포넌트가 실행되지 않도록 처리합니다.
+            
             enabled = false;
         }
         else
@@ -316,25 +254,23 @@ public override void SetDamage(int attack)
 
     public override void Move(Vector2 dir)
     {
-        // if (getModel.IsTag("Attack"))
-        //  return;
-
+    
         Vector3 temp = dir.normalized * 0.5f;
         temp += getModel.getTarget.getCenter.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         
 
-        //if (Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster") | 1 << LayerMask.NameToLayer("OutWall") 
-        //    | 1 << LayerMask.NameToLayer("InWall") | 1 << LayerMask.NameToLayer("Utile") | 1 << LayerMask.NameToLayer("NPC")))
-            if (Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster")))
-            {
+       
+
+       if(Physics2D.OverlapBox(temp, new Vector2(0.1f, 0.6f), angle, 1 << LayerMask.NameToLayer("Monster")))
+        {
             
             Vector2 v = dir * playerInfo.currSpeed;
             getModel.Move(v, true);
             charDir(dir);
         }
-        else
+       else
         {
             Vector2 v = dir * playerInfo.currSpeed;
             getModel.Move(v);
@@ -374,9 +310,6 @@ public override void SetDamage(int attack)
         if (path.path.Count == 0)
         {
             getModel.getAnimator.SetBool("Move", false);
-
-            //print(gameObject.name);
-
             AIPathMng.Instance.Find(path, targetAI);
 
         }
@@ -402,7 +335,6 @@ public override void SetDamage(int attack)
                 if (pathFalseCount == 10)
                 {
                     List<AINode2D> tempPath = new List<AINode2D>();
-                    //tempPath.Add(path.path[0]);
                     tempPath = AIPathMng.Instance.tempWallCreate(this, GameDB.targetUnit);
                     path.path.Clear();
                     AIPathMng.Instance.Find(path, targetAI, tempPath);
@@ -437,8 +369,8 @@ public override void SetDamage(int attack)
                 
                 
                 transform.position = Vector3.MoveTowards(transform.position,
-                                                                                       v,
-                                                                                       playerInfo.currSpeed * Time.deltaTime);
+                                                         v,
+                                                         playerInfo.currSpeed * Time.deltaTime);
 
                 if (Vector3.Distance(transform.position, v) < 0.01f)
                     path.path.RemoveAt(0);

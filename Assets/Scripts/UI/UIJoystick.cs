@@ -23,10 +23,7 @@ public class UIJoystick : MonoBehaviour,
     private List<Image> renderers
         = new List<Image>();
 
-    //private Image test;
 
-   
-    //bool upOn = false;
 
 
     private Vector2 direction = Vector2.zero;
@@ -36,7 +33,6 @@ public class UIJoystick : MonoBehaviour,
         get { return direction; }
     }
 
-    // ui를 툴렀을 때 호출되는 함수
     public void OnPointerDown(PointerEventData eventData)
     {
         
@@ -55,7 +51,6 @@ public class UIJoystick : MonoBehaviour,
 
     }
 
-    // ui를 눌렀다가 떄었을 떄 호출되는 함수
     public void OnPointerUp(PointerEventData eventData)
     {
 
@@ -85,17 +80,15 @@ public class UIJoystick : MonoBehaviour,
 
     }
 
-    // ui를 누르고 드래그하고 있을 때 호둘최는 함수
     public void OnDrag(PointerEventData eventData)
     {
 
         readCheck = false;
 
         joystickBody.position = touchPos;
-            //Vector2 t = touchPos;
+   
             Vector2 direction = eventData.position - touchPos;
             this.direction = direction.normalized;
-            //float currDist = Vector2.Distance(eventData.position,  transform.position);
             float currDist = Vector2.Distance(eventData.position, touchPos);
             button.transform.position = eventData.position;
             if (currDist > distance)
@@ -140,7 +133,7 @@ public class UIJoystick : MonoBehaviour,
 
     public void Init()
     {
-        //Input.multiTouchEnabled = enabled;
+  
         joystickBody = transform.Find("JoystickBody");
         button = transform.Find("JoystickBody/Button");
         range = transform.Find("JoystickBody/Range");
@@ -154,17 +147,12 @@ public class UIJoystick : MonoBehaviour,
         joystick = GetComponent<Image>();
 
         renderers.AddRange(joystickBody.GetComponentsInChildren<Image>());
-        //test = joystickBody.GetComponent<Image>();
+
 
 
 
     }
 
     
-    // Update is called once per frame
-    void Update()
-    {
-       
-
-    }
+ 
 }

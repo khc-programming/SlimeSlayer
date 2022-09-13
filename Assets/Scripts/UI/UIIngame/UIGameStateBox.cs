@@ -8,7 +8,6 @@ public class UIGameStateBox : MonoBehaviour
     Transform fail;
     Transform clear;
 
-    // Start is called before the first frame update
     public void Init()
     {
         clear = transform.Find("CLRER");
@@ -33,9 +32,4 @@ public class UIGameStateBox : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

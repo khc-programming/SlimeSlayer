@@ -9,7 +9,7 @@ public class Portal : Unit
     int spawnID;
     int tableID;
     int LV = 0;
-    //public SceneType currScene = SceneType.None;
+   
     public AIPath2D path;
 
 
@@ -38,8 +38,7 @@ public class Portal : Unit
         {
             if(sceneType == SceneType.GameScene)
             {
-                //GameScene.stageLv = LV;
-                //GameScene.stageStart = true;
+               
 
                 GameScene.stageLv = LV;
                 SceneMng.Instance.EnableDelay(1.0f, sceneType, LV);
@@ -52,10 +51,10 @@ public class Portal : Unit
         }
         
 
-        // 1초동안 화면을 검게 만든다.
+      
         UIMng.Instance.FadeOut(1);
 
-        // 1초뒤에 로딩 ui를 보여준다.
+        
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
     }

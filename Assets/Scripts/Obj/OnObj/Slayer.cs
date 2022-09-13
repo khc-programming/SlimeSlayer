@@ -25,8 +25,6 @@ public class Slayer : Player
     }
 
 
-
-
     public override void Attack()
     {
         if (getModel.IsTag("Attack"))
@@ -136,7 +134,7 @@ public class Slayer : Player
                     tempWind03.setInfo(10, weapon.color, playerInfo.skillList[2].level, this.unitType, playerInfo.lastState[0]);
                     tempWind03.Shoot();
 
-                    //tempWind02.Shoot();
+                    
                 }
             }
 

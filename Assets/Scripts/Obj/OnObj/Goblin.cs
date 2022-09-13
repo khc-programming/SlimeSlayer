@@ -95,8 +95,6 @@ public class Goblin : Monster
         attack1.Init();
         attack1.setInfo(3, Color.black, 1, this.unitType, monsterInfo.lastState[0]);
         attack1.Shoot();
-        
-
-
+       
     }
 }

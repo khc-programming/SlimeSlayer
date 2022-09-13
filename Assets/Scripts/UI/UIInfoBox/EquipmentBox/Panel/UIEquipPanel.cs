@@ -77,9 +77,5 @@ public class UIEquipPanel : BaseUI
 
     #endregion 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

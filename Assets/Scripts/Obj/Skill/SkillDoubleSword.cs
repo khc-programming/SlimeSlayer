@@ -19,7 +19,7 @@ public class SkillDoubleSword : Skill
         getModel.getRigid2D.velocity = transform.right;
         getSkillInfo.saveVelocity = getModel.getRigid2D.velocity;
 
-        //Destroy(gameObject, 5f);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -17,7 +17,7 @@ public class UICharacterTabBtns : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    
     public void Init()
     {
         uiTabs.AddRange(GetComponentsInChildren<UICharacterTab>(true));
@@ -69,10 +69,5 @@ public class UICharacterTabBtns : MonoBehaviour
 
     }
 
-   
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+  
 }

@@ -37,7 +37,7 @@ public class GameScene : Scene
     public static bool isState = false;
 
     public static bool isClear = false;
-    //public static bool firstPlayer = false;
+    
 
     public static int stageLv = 0;
     public static bool stageStart = false;
@@ -48,18 +48,18 @@ public class GameScene : Scene
 
     // 1. 생성할 캐릭터 리스트를 취합
     // 2. 비동기로 캐릭터 리스트를 생성
-    // 3. 생성이된 캐릭터가 있다면 로딩 ui에 적용해줘야 합니다.
+    // 3. 생성이된 캐릭터가 있다면 로딩 ui에 적용
     public IEnumerator IELoadAll()
     {
         SpawnPoint[] spawnArr = GameObject.FindObjectsOfType<SpawnPoint>();
 
-        // spawnList는 현재 생성이 완료되지 않은 캐릭터 리스트를 가리킨다.!
+        // spawnList는 현재 생성이 완료되지 않은 캐릭터 리스트를 가리킨다.
         spawnList.AddRange(spawnArr);
 
-        // 생성할 캐릭터의 개수를 받습니다.
+        // 생성할 캐릭터의 개수를 받는다.
         int totalCount = spawnList.Count;
 
-        // 비동기 함수를 호출합니다.
+        // 비동기 함수를 호출
         for (int i = 0; i < spawnList.Count; ++i)
             spawnList[i].Create();
 
@@ -67,13 +67,13 @@ public class GameScene : Scene
 
         float ratio = 0.3f;
 
-        // 생성할 캐릭터가 있을때까지 계속 순회하겠다.!
+        // 생성할 캐릭터가 있을때까지 계속 순회
         while (spawnList.Count > 0)
         {
             temp.Clear();
             foreach (SpawnPoint s in spawnArr)
             {
-                // 아직 로드된 상태가 아니라면 temp값에 저장합니다.
+                // 아직 로드된 상태가 아니라면 temp값에 저장
                 if (!s.IsCreated)
                     temp.Add(s);
                 else
@@ -89,7 +89,7 @@ public class GameScene : Scene
         }
 
         UnitMng.Instance.GetPlayer();
-        //firstPlayer = true;
+        
         UnitMng.Instance.Pause();
 
         isClear = true;
@@ -103,7 +103,7 @@ public class GameScene : Scene
         
 
 
-        // 로딩 ui를 꺼줍니다.
+        
         UIMng.Instance.SetActive(UIType.LoadingUI, false);
 
         UnitMng.isUnitcreateComplete = true;
@@ -117,7 +117,7 @@ public class GameScene : Scene
        
 
 
-        // 페이드 인 처리를 합니다.
+        
         UIMng.Instance.FadeIn(1);
         AudioMng.Instance.PlayBackground("GameBackground", 0.3f);
         isState = true;
@@ -141,7 +141,7 @@ public class GameScene : Scene
     }
 
     #region Scene에서 상속받은 함수들
-    // 신 파일이 로드가 완료되는 시점에 호출되는 함수입니다.
+    
     public override void Enter()
     {
         UnitMng.pause = true;
@@ -166,7 +166,7 @@ public class GameScene : Scene
         
     }
 
-    // 신 파일이 다른 신 파일로 변경이 완료되었을 때 호출되는 함수입니다.
+    
     public override void Exit()
     {
         AIPathMng.Instance.CallEvent(AIPathType.AIGrid2DRenderer, "WallDestory");
@@ -179,36 +179,23 @@ public class GameScene : Scene
        
 
     }
-    // 파일이 로드되고 있을때의 상황을 보여주기 위한 함수입니다.
-    // 아래의 함수에서 로딩 ui를 출력할수도 있습니다.
-
+    
+    
     public override void Progress(float progress)
     {
-        // 아래처럼 코드를 작성하면 100% 신 파일이 로드되더라도 ui 슬라이더가 30%만 채워지는 상태가 됩니다.
+        // 아래처럼 코드를 작성하면 100% 신 파일이 로드되더라도 ui 슬라이더가 30%만 채워지는 상태가 된다.
         UIMng.Instance.CallEvent(UIType.LoadingUI, "SetValue", progress * 0.3f);
     }
     #endregion Scene에서 상속받은 함수들
 
     public void delayPause()
     {
-        //UnitMng.pause = false;
+        
         UnitMng.Instance.Resume();
     }
     private void OnGUI()
     {
-        //// 버튼을 클릭하면 다음 신으로 변경합니다.
-        //if (GUI.Button(new Rect(0, 0, 100, 100), "NextScene"))
-        //{
-
-        //    SceneMng.Instance.EnableDelay(1.0f, SceneType.GameScene);
-
-        //    // 1초동안 화면을 검게 만든다.
-        //    UIMng.Instance.FadeOut(1);
-
-        //    // 1초뒤에 로딩 ui를 보여준다.
-        //    UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
-        //    UnitMng.Instance.Clear();
-        //}
+        
     }
 
 }

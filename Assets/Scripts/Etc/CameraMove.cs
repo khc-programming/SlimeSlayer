@@ -19,7 +19,7 @@ public class CameraMove : MonoBehaviour
         set { speed = value; }
     }
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         int monster = LayerMask.NameToLayer("Monster");
@@ -46,20 +46,9 @@ public class CameraMove : MonoBehaviour
 
 
 
-
-        //Physics2D.IgnoreLayerCollision(monsterLayer, monsterLayer);
-        //Physics2D.IgnoreLayerCollision(player, monsterLayer);
-        //Physics2D.IgnoreLayerCollision(monsterLayer, monsterLayer);
-        // 횡스크롤 방식이기 때문에 
-        // 몬스터와 몬스터는 충돌되지 않도록 처리합니다.
-        // Physics2D.IgnoreLayerCollision(enemyLayer, enemyLayer);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void LateRun()
     {
@@ -70,8 +59,6 @@ public class CameraMove : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, tempPos, Time.deltaTime * speed);
         
 
-        
-        
     }
 
    

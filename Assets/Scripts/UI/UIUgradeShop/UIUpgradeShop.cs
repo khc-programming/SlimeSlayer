@@ -65,11 +65,7 @@ public class UIUpgradeShop : BaseUI
 
 
         eventHandler = GetComponent<UpgradeInputEventHandler>();
-        // if (eventHandler != null) eventHandler.Init();
-
         moneyText = UtilHelper.Find<TMP_Text>(transform, "UIUpgradeBox/MoneyBox/MoneyText");
-
-        //moneyText.text = string.Format("{0:#,0000000000000000000000}", GameDB.money);
 
     }
 
@@ -93,7 +89,5 @@ public class UIUpgradeShop : BaseUI
     }
 
     #endregion
-
-
 
 }

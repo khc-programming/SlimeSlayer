@@ -9,7 +9,7 @@ public class UIMiniPopup : BaseUI
 {
 
     TMP_Text getGold;
-    //TMP_Text clearGold;
+    
     List<Button> buttonList = new List<Button>();
 
 
@@ -20,7 +20,7 @@ public class UIMiniPopup : BaseUI
         {
            
             getGold.text = string.Format("{0:#,0}", GameDB.getGold) + "(사냥 보상)\n" + string.Format("{0:#,0}", GameDB.getGold / 2) + "(클리어 보상)";
-            //clearGold.text = string.Format("{0:#,0}", GameDB.getGold/2) + "(클리어 보상)";
+            
             GameDB.money += (GameDB.getGold + GameDB.getGold /2);
             UIMng.Instance.SetMoney(GameDB.money);
 
@@ -30,7 +30,7 @@ public class UIMiniPopup : BaseUI
         {
             
             getGold.text = string.Format("{0:#,0}", GameDB.getGold) + "(사냥 보상)";
-            //clearGold.text = "";
+            
             GameDB.money += GameDB.getGold;
             UIMng.Instance.SetMoney(GameDB.money);
         }
@@ -60,9 +60,6 @@ public class UIMiniPopup : BaseUI
     {
         Transform t = transform.Find("Background/Window/GetGold");
         if(t != null) getGold = t.GetComponent<TMP_Text>();
-
-       // t = transform.Find("Background/ClearGold");
-        //if (t != null) clearGold = t.GetComponent<TMP_Text>();
 
         buttonList.AddRange(GetComponentsInChildren<Button>());
 
@@ -96,7 +93,7 @@ public class UIMiniPopup : BaseUI
     public override void Close()
     {
         getGold.text = "";
-        //clearGold.text = "";
+       
         gameObject.SetActive(false);
     }
 

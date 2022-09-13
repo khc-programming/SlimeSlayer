@@ -54,7 +54,7 @@ public class FadeUI : BaseUI
     {
         SetActive(true);
 
-        // 사용중이라면 ( 업데이트 중이라면 ) 함수를 종료합니다.
+        // 사용중이라면 ( 업데이트 중이라면 ) 함수를 종료
         if (update)
             return;
 
@@ -80,15 +80,4 @@ public class FadeUI : BaseUI
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -7,7 +7,6 @@ using UnityEngine;
 // 는 의미를 갖습니다. <강제조건>
 
 
-
 public class TSingleton<T> : MonoBehaviour where T : TSingleton<T>
 {
     

@@ -44,9 +44,5 @@ public class UICharacterState : BaseUI
 
     #endregion 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

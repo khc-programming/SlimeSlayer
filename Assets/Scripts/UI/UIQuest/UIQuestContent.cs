@@ -7,7 +7,7 @@ public class UIQuestContent : BaseUI
 {
     Quest questInfo;
     UIQuestInfoBtn questInfoBtnt;
-    //SpriteColor spriteColor;
+   
     TMP_Text questName;
     Slider slider;
     Image barImage;

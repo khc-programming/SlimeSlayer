@@ -22,3 +22,4 @@ public class UIShopExit : MonoBehaviour,
 
     }
 }
+

@@ -61,8 +61,6 @@ public class TargetMng : Mng<TargetMng>
             
         }
 
-        //depthTarget.AddRange(TargetList);
-
         depthTarget.Sort(Comparison);
         depthTarget.Reverse();
 
@@ -146,19 +144,19 @@ public class TargetMng : Mng<TargetMng>
 
     public override void OnActive()
     {
-      //  GameDB.MngEnabled += (int)MngType.TargetMng;
+      
     }
     public override void OnDeactive()
     {
-       // GameDB.MngEnabled -= (int)MngType.TargetMng;
+       
     }
     public override void OnGameEnable()
     {
-       // GameDB.MngEnabled += (int)MngType.TargetMng;
+       
     }
     public override void OnGameDisable()
     {
-       // GameDB.MngEnabled -= (int)MngType.TargetMng;
+       
     }
 
     public override void SetActive(bool state)
@@ -252,8 +250,5 @@ public class TargetMng : Mng<TargetMng>
 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    
 }

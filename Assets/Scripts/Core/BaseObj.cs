@@ -55,8 +55,6 @@ public abstract class BaseObj : MonoBehaviour
         enabled = state;
     }
 
-    private void Update()
-    {
-        
-    }
+   
 }
+

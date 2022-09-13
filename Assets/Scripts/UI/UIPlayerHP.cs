@@ -29,7 +29,7 @@ public class UIPlayerHP : BaseUI
     {
     }
     #endregion BASEUI로부터 상속받은 함수목록
-    // Start is called before the first frame update
+ 
 
   
     
@@ -56,9 +56,5 @@ public class UIPlayerHP : BaseUI
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

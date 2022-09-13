@@ -93,9 +93,7 @@ public class Skill : Unit
                                                 DataManager.ToF(TableType.SKILLTABLE, skillInfo.tableID, "ATTACK");
         skillInfo.attack = Mathf.FloorToInt(skillInfo.attack * (skillInfo.originalAttack/100));
        
-        //skillInfo.originalSpeed = DataManager.ToF(TableType.SKILLTABLE, skillInfo.tableID, "SPEED") *
-        //                                        (DataManager.ToF(TableType.SKILLTABLE, skillInfo.tableID, "SPEEDPERCENT") * (skillInfo.LV / 20)) +
-        //                                        DataManager.ToF(TableType.SKILLTABLE, skillInfo.tableID, "SPEED");
+       
         
     }
 
@@ -105,44 +103,7 @@ public class Skill : Unit
     }
 
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (getModel.getAnimator == null)
-    //    {
-    //        if (collision.tag == "Monster" || collision.tag == "Player" || collision.tag == "OutWall")
-    //        {
-    //            collision.SendMessage("SetDamage", skillInfo.attack, SendMessageOptions.DontRequireReceiver);
-
-    //            Hit hit = Resources.Load<Hit>("Prefab/Hit");
-
-    //            Vector3 v = transform.position;
-
-    //            if (attackPivo != null)
-    //            {
-    //                v = attackPivo.transform.position;
-    //            }
-
-    //            hit = Instantiate(hit, v, Quaternion.identity);
-    //            hit.Init();
-
-
-    //            Destroy(gameObject);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        if (collision.tag == "Monster" || collision.tag == "Player" || collision.tag == "OutWall")
-    //        {
-    //            collision.SendMessage("SetDamage", skillInfo.attack, SendMessageOptions.DontRequireReceiver);
-
-    //            getModel.getColl2D.enabled = false;
-    //            getModel.getRigid2D.velocity = Vector2.zero;
-    //            getModel.getAnimator.SetTrigger("Finish");
-
-    //        }
-    //    }
-
-    //}
+    
 
 
     public void OnColl2D()

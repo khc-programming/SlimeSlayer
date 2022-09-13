@@ -37,3 +37,4 @@ public class UpgradeMan : NPC
         UIMng.Instance.Get<UIUpgradeShop>(UIType.UIUpgradeShop).SetActive(true);
     }
 }
+

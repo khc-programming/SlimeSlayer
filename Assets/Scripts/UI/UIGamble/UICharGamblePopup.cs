@@ -112,3 +112,4 @@ public class UICharGamblePopup : BaseUI
 
     #endregion
 }
+

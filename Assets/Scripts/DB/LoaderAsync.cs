@@ -23,7 +23,7 @@ public class LoaderAsync : MonoBehaviour
         StartCoroutine(IELoadAsync<T>(spawnID, tableID, LV, path, position, rotation ,action));
     }
 
-    // 함수의 오버로딩을 통해 경우에 따라 처리하는 사항을 정리하려고 합니다.
+    
     private IEnumerator IELoadAsync<T>(
                                     int spawnID,
                                     int tableID,
@@ -35,7 +35,7 @@ public class LoaderAsync : MonoBehaviour
                                     where T : UnityEngine.Object
 
     {
-        // 차후 일정한 시간까지 로드하지 못했다면 종료하는 코드를 작성해야 합니다.
+        // 차후 일정한 시간까지 로드하지 못했다면 종료하는 코드를 작성하자
         
         ResourceRequest request = Resources.LoadAsync(path);
         
@@ -54,3 +54,4 @@ public class LoaderAsync : MonoBehaviour
 
 
 }
+

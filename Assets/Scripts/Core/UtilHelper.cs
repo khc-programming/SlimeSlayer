@@ -8,11 +8,11 @@ public static class UtilHelper
 {
    
     // 확장 메소드를 활용한 함수.
-    // 확장 메소드를 사용할때는 this키워드를 사용해주셔야 합니다.
+    // 확장 메소드를 사용할때는 this키워드를 사용한다.
     // Component클래스를 확장시킨 이유는 
     // 유니티에서 사용자가 사용하는 클래스가 대부분
     // MonoBehaviour를 상속받기 때문에 기준이 되는 클래스로서
-    // Component를 선택하였습니다.
+    // Component를 선택
 
     public static T CreateObject<T>(Transform parent,
                                   bool init = false) where T : Component
@@ -42,19 +42,19 @@ public static class UtilHelper
                                    bool init = false,
                                    Transform parent = null) where T : Component
     {
-        // 프리팹 파일은 정보를 담고 있는 텍스트 파일입니다.
+        // 프리팹 파일은 정보를 담고 있는 텍스트 파일
         // Resources.Load 함수는 텍스트 파일을 분석해서
         // 해당텍스트의 정보에 따라 이미지, 3D모델링등의 파일을 
-        // 로드하는 역할을 수행합니다.
+        // 로드하는 역할을 수행
         
         T t = Resources.Load<T>(path);
         if (t == null)
             return null;
 
-        // 오브젝트를 생성합니다.
+        // 오브젝트를 생성
         // Instantiate 함수는 넘겨받은 메모리의 사이즈와 동일한
         // 메모리 공간을 확보하고 메모리에 담겨진 데이터를
-        // 복사해주는 함수입니다.
+        // 복사해주는 함수
         t = Object.Instantiate<T>(t, pos, rot, parent);
         if (init)
         {
@@ -139,3 +139,4 @@ public static class UtilHelper
     }
 
 }
+

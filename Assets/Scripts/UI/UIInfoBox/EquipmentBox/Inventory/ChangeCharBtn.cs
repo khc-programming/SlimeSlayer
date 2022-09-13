@@ -7,7 +7,7 @@ public class ChangeCharBtn : MonoBehaviour
     Button btn;
     UICharacterInventory inventory;
     public bool path = false;
-    // Start is called before the first frame update
+   
     void Start()
     {
         btn = GetComponent<Button>();

@@ -35,3 +35,4 @@ public class ShopMan : NPC
         UIMng.Instance.Get<UIShop>(UIType.UIShop).SetActive(true);
     }
 }
+

@@ -89,11 +89,9 @@ public class UIShop : BaseUI
 
 
         eventHandler = GetComponent<ShopInputEventHandler>();
-        // if (eventHandler != null) eventHandler.Init();
-
         moneyText = UtilHelper.Find<TMP_Text>(transform, "UIShopBox/MoneyBox/MoneyText");
 
-        //moneyText.text = string.Format("{0:#,0000000000000000000000}", GameDB.money);
+ 
 
     }
 

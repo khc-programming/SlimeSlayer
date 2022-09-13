@@ -25,7 +25,7 @@ public class SaveQuest
 
 
 
-    //public Dictionary<QuestType, Dictionary<int, int[]>> questCount = new Dictionary<QuestType, Dictionary<int, int[]>>();
+    
     public QuestStateType questState = QuestStateType.FALSE;
     public QuestDialogMode questDialogMode = QuestDialogMode.START;
 }
@@ -272,7 +272,7 @@ public class Quest
                         string[] tempStr = GIVEUP[massageCount++].Split('@');
                         
                         strList.AddRange(tempStr);
-                        //isModeChangeOn = true;
+                        
                         questDialogMode = QuestDialogMode.GIVEUP;
 
                         return strList;
@@ -1440,8 +1440,7 @@ public class Quest
 
 public static class QuestDataManager
 {
-    //private static Dictionary<string, Dictionary<int, Quest>> questList =
-    //    new Dictionary<string, Dictionary<int, Quest>>();
+    
 
     public static Dictionary<string, Dictionary<int, int>> questLowList =
         new Dictionary<string, Dictionary<int, int>>();
@@ -1487,14 +1486,6 @@ public static class QuestDataManager
         return 0;
     }
 
-    //public static Quest GetQuest(string name, int level = 1)
-    //{
-    //    if(questList.ContainsKey(name))
-    //        if(questList[name].ContainsKey(level))
-    //            return questList[name][level];
-
-    //    return null;
-    //}
 
     private static Dictionary<QuestType, Dictionary<int, int[]>> 
         SetQuestConunt(string shop, string upgrade, string gamble, string hunt)
@@ -1696,42 +1687,6 @@ public static class QuestDataManager
     }
 
   
-
-
-    //public static bool Load()
-    //{
-    //    LowBase questData = DataManager.Get(TableType.QUESTTABLE);
-    //    questList.Clear();
-
-    //    for (int i = 1; i <= questData.Table.Count; i++)
-    //    {
-
-    //        if (!questList.ContainsKey(questData.ToS(i, "NPCNAME")))
-    //            questList.Add(questData.ToS(i, "NPCNAME"), new Dictionary<int, Quest>());
-
-    //        Quest tempQuest = new Quest();
-           
-
-    //        tempQuest.SetInfo(questData.ToS(i, "NPCNAME"), questData.ToS(i, "NPCKNAME"), questData.ToI(i, "LEVEL"),
-    //                          SetQuestConunt(questData.ToS(i, "SHOP"), questData.ToS(i, "UPGRADE"), questData.ToS(i, "GAMBLE"), questData.ToS(i, "HUNT")),
-    //                          questData.ToS(i, "TITLE"),
-    //                          TextSplit(questData.ToS(i, "START"), '|'),
-    //                          TextSplit(questData.ToS(i, "PROCESS"), '|'),
-    //                          TextSplit(questData.ToS(i, "CLEAR"), '|'),
-    //                          TextSplit(questData.ToS(i, "GIVEUP"), '|'),
-    //                          questData.ToS(i, "QUESTNAME"), questData.ToS(i, "CONTENT"),
-    //                          questData.ToI(i, "REWARDGOLD"), GetItem(questData.ToS(i, "REWARDITEM"))
-    //                          );
- 
-
-    //        questList[tempQuest.GetString("NPCNAME")].Add(tempQuest.GetLEVEL, tempQuest);
-
-    //    }
-
-    //    if (questList.Count != 0)
-    //        return true;
-    //    return false;
-    //}
 
 
 

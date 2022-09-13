@@ -31,20 +31,10 @@ public class UnitMng : Mng<UnitMng>
     // 프리팸 경로
     private readonly string path = "Prefab/Unit/";
 
-    // 고유 아이디를 지정하기 위해 추가하였습니다.
-    //private static int uniqueCount = 10;
+  
 
-    // 고유 아이디를 지정하기 위해 추가하였습니다.
     private static int spawnCount = 10;
 
-
-
-
-    // 1. 주변 반경 몇미터내에 있는 캐릭터를 알려주세요.!
-    // 2. 상성이 있을때 그 상성에 맞는 캐릭터를 알려주세요.!
-    // 3. 2D 게임일경우 SpriteDepth값을 조정하는 역할을 수행해야 합니다.
-    // 4. 특정 상황에서 주변 캐릭터의 멈춤현상, 전체 캐릭터의 멈춤 현상등을 제어하는 코드가 있어야 합니다.
-    // 5. 캐릭터 AI의 이동 우선 순위를 정할 수 있는 코드를 지원해야 합니다.
 
     #region // Mng 추상 메소드 정의부
 
@@ -103,19 +93,19 @@ public class UnitMng : Mng<UnitMng>
 
     public override void OnActive()
     {
-      //  GameDB.MngEnabled += (int)MngType.UnitMng;
+     
     }
     public override void OnDeactive()
     {
-      //  GameDB.MngEnabled -= (int)MngType.UnitMng;
+     
     }
     public override void OnGameEnable()
     {
-      //  GameDB.MngEnabled += (int)MngType.UnitMng;
+      
     }
     public override void OnGameDisable()
     {
-      //  GameDB.MngEnabled -= (int)MngType.UnitMng;
+      
     }
 
     public override void SetActive(bool state)
@@ -184,14 +174,7 @@ public class UnitMng : Mng<UnitMng>
 
     public int AddAsync(UnitType unitType ,int tableID, int LV, Vector3 position, Quaternion rotation)
     {
-        // 테이블 아이디에 맞는 모델링의 이름을 찾습니다.
-        // 그 이름값에 맞도록 로딩할 예정입니다.
-        // ----- 정보 세팅 ------
-
-        // 차후 수정될 사항
-
-        // -----------------------
-
+        
         TableType loadTable = TableType.None;
 
         switch((int)unitType)
@@ -233,12 +216,6 @@ public class UnitMng : Mng<UnitMng>
             spawnID = 1;
             AddAsync(unitType, spawnID, tableID, LV, path + unitType + DataManager.ToS(loadTable, tableID, "MODEL"), position, rotation);
         }
-        //else if(unitType == UnitType.None)
-        //{
-        //    spawnID = spawnCount;
-        //    AddAsync(unitType, spawnID, tableID, LV, path + unitType + "/Portal", position, rotation);
-        //    spawnCount++;
-        //}
         else
         {
             spawnID = spawnCount;
@@ -254,7 +231,7 @@ public class UnitMng : Mng<UnitMng>
     {
 
         
-        // 비동기 로딩이 완료되었다면 캐릭터를 생성하고, 저장소에 저장합니다.
+        // 비동기 로딩이 완료되었다면 캐릭터를 생성하고, 저장소에 저장
         unit = Instantiate(unit, position, rotation);
         
         unit.Init();
@@ -263,7 +240,7 @@ public class UnitMng : Mng<UnitMng>
      
 
 
-        // 생성한 캐릭터를 등록합니다
+        // 생성한 캐릭터를 등록
         if (unitDic.ContainsKey(spawnID) == false)
             unitDic.Add(spawnID, unit);
 
@@ -274,7 +251,7 @@ public class UnitMng : Mng<UnitMng>
         loader.LoadAsync<Unit>(spawnID, tableID, LV, fileName, position, rotation, Finished);
     }
 
-    // 캐릭터를 멈추도록 합니다.
+    // 캐릭터/스킬을 멈추는 함수 
     public void PauseAll()
     {
         foreach (var kValue in unitDic)
@@ -282,7 +259,7 @@ public class UnitMng : Mng<UnitMng>
             kValue.Value.Pause();
         }
     }
-    // 캐릭터를 다시 움직이도록 합니다.
+    // 캐릭터/스킬을 움직이게 하는 함수
     public void ResumeAll()
     {
         foreach (var kValue in unitDic)
@@ -416,8 +393,6 @@ public class UnitMng : Mng<UnitMng>
             }
 
 
-            //print(value.Value.tag);
-
         }
 
         
@@ -426,12 +401,4 @@ public class UnitMng : Mng<UnitMng>
         return targetList;
     }
 
-  
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

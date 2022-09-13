@@ -30,7 +30,7 @@ public class UIDialogMng : BaseUI
         
         if (dialogDic.ContainsKey(name))
         {
-            //AudioMng.Instance.Play2DEffect("Open");
+            
             dialogDic[name].OnTouchMode(isDeal);
             SetTopPos(name);
             currDialog = dialogDic[name];
@@ -66,7 +66,7 @@ public class UIDialogMng : BaseUI
         }
     }
 
-    public UIDialog UIDialogCreate(Transform pivot, string name)//, QuestMode mode = QuestMode.TITLE)
+    public UIDialog UIDialogCreate(Transform pivot, string name)
     {
         if (System.Enum.IsDefined(typeof(NPCNameType), name))
         {

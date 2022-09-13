@@ -42,7 +42,6 @@ public static class GameDB
 
     #region // 인벤토리 창 등
 
-    //private static int uniqueIDCount = 1000;
 
     public static UserInfo userInfo = new UserInfo();
 
@@ -60,11 +59,11 @@ public static class GameDB
     public static Dictionary<int, PlayerInfo> charDic = new Dictionary<int, PlayerInfo>();
 
     // 현재 계정이 갖고 있는 머니
-    public static int money = 10000;//1000000000;
+    public static int money = 10000;
 
     
 
-    // 유니크 넘버를 통해 아이템의 정보를 받아온다( 캐릭터가 있다면)
+    // 유니크 넘버를 통해 아이템의 정보를 받아온다(캐릭터가 있다면)
     public static PlayerInfo GetChar(int uniqueID)
     {
         
@@ -100,7 +99,7 @@ public static class GameDB
         info.level = 1;
         info.uniqueID = -1;
         info.equip = false;
-       // info.equipItemArray = equipItemArray;
+       
 
         System.Enum.TryParse<Job>(DataManager.ToS(TableType.PLAYERTABLE, tableID, "JOB"), out info.job);
         System.Enum.TryParse<JobBit>(DataManager.ToS(TableType.PLAYERTABLE, tableID, "JOB"), out info.jobBit);
@@ -311,7 +310,7 @@ public static void SetItemInfoUpdate(int uniqueID)
 
 
 
-    // 유니크 넘버를 통해 아이템의 정보를 받아온다( 아이템이 있다면)
+    // 유니크 넘버를 통해 아이템의 정보를 받아온다(아이템이 있다면)
     public static ItemInfo GetItem(int uniqueID)
     {
         if (itemDic.ContainsKey(uniqueID))
@@ -453,8 +452,7 @@ public static void SetItemInfoUpdate(int uniqueID)
             SetInfo(randomCount, level, ID++, false, 0);
             tempList.Add(GetItem(ID-1));
         }
-        //userInfo.listOfItems.Clear();
-        //userInfo.listOfItems.AddRange(itemDic.Values);
+        
         userInfo.uniqueCount = ID;
 
         return tempList;
@@ -498,8 +496,7 @@ public static void SetItemInfoUpdate(int uniqueID)
             tempList.Add(GetChar(ID-1));
         }
 
-        //userInfo.listOfChar.Clear();
-        //userInfo.listOfChar.AddRange(charDic.Values);
+  
         userInfo.uniqueCount = ID;
         return tempList;
     }
@@ -563,13 +560,11 @@ public static void SetItemInfoUpdate(int uniqueID)
             }
 
 
-            //int randomCount = Random.Range(1, 27);
-            //int level = Random.Range(1, 2);
+           
             SetInfo(gambleNum, 1, ID++, false, 0);
             tempList.Add(GetItem(ID - 1));
         }
-        //userInfo.listOfItems.Clear();
-        //userInfo.listOfItems.AddRange(itemDic.Values);
+        
         userInfo.uniqueCount = ID;
 
         return tempList;
@@ -597,8 +592,7 @@ public static void SetItemInfoUpdate(int uniqueID)
             {
                 gambleNum = 2;
             }
-            //int randomCount = Random.Range(1, 4);
-            //int level = Random.Range(1, 2);
+            
             int[] equipCharacter = new int[] { 0, 0, 0 };
 
 
@@ -627,8 +621,7 @@ public static void SetItemInfoUpdate(int uniqueID)
             tempList.Add(GetChar(ID - 1));
         }
 
-        //userInfo.listOfChar.Clear();
-        //userInfo.listOfChar.AddRange(charDic.Values);
+      
         userInfo.uniqueCount = ID;
         return tempList;
     }
@@ -679,9 +672,9 @@ public static void SetItemInfoUpdate(int uniqueID)
 
     public static List<ItemInfo> GetAllItems(int category)
     {
-        // 카테고리에 대한 아이템을 찾습니다.
+        
         List<ItemInfo> itemlist = new List<ItemInfo>();
-        // KeyValuePair
+        
         foreach (var pair in itemDicAll)
         {
             int state = category & (int)pair.Value.bitCategory;
@@ -700,9 +693,9 @@ public static void SetItemInfoUpdate(int uniqueID)
     }
     public static List<ItemInfo> GetItems(int category)
     {
-        // 카테고리에 대한 아이템을 찾습니다.
+        // 카테고리에 대한 아이템을 찾는다.
         List<ItemInfo> itemlist = new List<ItemInfo>();
-        // KeyValuePair
+        
         foreach (var pair in itemDic)
         {
             int state = category & (int)pair.Value.bitCategory;
@@ -716,9 +709,6 @@ public static void SetItemInfoUpdate(int uniqueID)
 
         
         itemlist.Sort(Sort);
-
-        // 아이템을 정렬합니다.
-        //itemlist.Sort(Sort);
         
         return itemlist;
     }
@@ -736,7 +726,7 @@ public static void SetItemInfoUpdate(int uniqueID)
             filePath = Application.dataPath;
         }
 
-        // 아래의 함수를 사용하면 플랫폼에 따라 경로가 설정되기 때문에 보다 안정성있게 사용할 수 있게 됩니다.
+        // 아래의 함수를 사용하면 플랫폼에 따라 경로가 설정되기 때문에 보다 안정성있게 사용할 수 있게 돤다.
         return Path.Combine(filePath, filename);
     }
 
@@ -801,15 +791,7 @@ public static void SetItemInfoUpdate(int uniqueID)
     }
     public static void Save(string filename)
     {
-        // 테스트 코드
-        //userInfo.OnReset();
-        //userInfo.charUniqueID = 100;
-
-        //// 캐릭터를 생성하는 ui는 아직 만들지 않았기 때문에 임시 데이터로 채워 넣습니다.
-        //// 차후 캐릭터 테이블까지 작성해야 합니다. 
-        //// 그리고 로컬 데이터까지 만들어야 합니다.( 로컬 라이징을 위한 데이터 )
-        //userInfo.listOfChar.Add(new SaveCharacter() { equip = true, grade = 3, level = 60, rank = 3, tableID = 1, uniqueID = 100, jobType = (int)JobBit.KNIGHT });
-        //userInfo.listOfChar.Add(new SaveCharacter() { equip = false, grade = 1, level = 30, rank = 2, tableID = 2004, uniqueID = 101, jobType = (int)JobBit.PRIEST });
+     
         userInfo.listOfChar.Clear();
         userInfo.listOfChar.AddRange(charDic.Values);
 
@@ -894,7 +876,6 @@ public static void SetItemInfoUpdate(int uniqueID)
         userInfo.money = GameDB.money;
 
         string json = JsonConvert.ToJson<UserInfo>(userInfo, true);
-        Debug.Log(filename);
         WriteFile(GetPath(filename), json);
     }
 
@@ -930,15 +911,7 @@ public static void SetItemInfoUpdate(int uniqueID)
 
     public static int CharSort2(PlayerInfo left, PlayerInfo right)
     {
-        // 정렬 기준 
-        // 1. 카테고리 
-        // 2. 랭크
-        // 3. 성급
-        // 4. 레벨
-
-        // compare함수에 넣어줄 경우 왼쪽의 데이터가 클때 1 그리고 오른쪽의 데이터가 클때 -1값을 리턴하면
-        // 오름차순 정렬이 되게 됩니다.
-        // 무기, 방패, 펫 , 포션 오름차순 정렬시킵니다.
+        
         if (left.job > right.job)
         {
             return 1;
@@ -951,16 +924,11 @@ public static void SetItemInfoUpdate(int uniqueID)
 
         else
         {
-            // 랭크와 grade 에 곱해주는 수치값은 차이를 두기위해 설정한 값입니다.
-            // 10000을 곱해주셔도 되고, 1000을 곱해주셔도 상관없습니다.
+            
             int leftVal = left.grade * 10000000 + left.level * 10000;
             int rightVal = right.grade * 10000000 + right.level * 10000;
 
-            //left.cost = leftVal;
-            //right.cost = rightVal;
-
-            // 랭크를 구별할때는 좋은 랭크부터 정렬시키려고 합니다.
-            // 따라서 왼쪽이 클때는 -1 오른쪽이 클때는 1값을 리턴합니다.
+            
             if (leftVal > rightVal)
                 return 1;
             else if (leftVal < rightVal)
@@ -973,15 +941,6 @@ public static void SetItemInfoUpdate(int uniqueID)
 
     public static int Sort(ItemInfo left, ItemInfo right)
     {
-        // 정렬 기준 
-        // 1. 카테고리 
-        // 2. 랭크
-        // 3. 성급
-        // 4. 레벨
-
-        // compare함수에 넣어줄 경우 왼쪽의 데이터가 클때 1 그리고 오른쪽의 데이터가 클때 -1값을 리턴하면
-        // 오름차순 정렬이 되게 됩니다.
-        // 무기, 방패, 펫 , 포션 오름차순 정렬시킵니다.
         if (left.bitCategory > right.bitCategory)
         {
             return 1;
@@ -994,16 +953,11 @@ public static void SetItemInfoUpdate(int uniqueID)
 
         else
         {
-            // 랭크와 grade 에 곱해주는 수치값은 차이를 두기위해 설정한 값입니다.
-            // 10000을 곱해주셔도 되고, 1000을 곱해주셔도 상관없습니다.
+        
             int leftVal = left.grade * 10000000 + left.level * 10000 - left.uniqueID;
             int rightVal = right.grade * 10000000 + right.level * 10000 - right.uniqueID;
 
-            //left.cost = leftVal;
-            //right.cost = rightVal;
-
-            // 랭크를 구별할때는 좋은 랭크부터 정렬시키려고 합니다.
-            // 따라서 왼쪽이 클때는 -1 오른쪽이 클때는 1값을 리턴합니다.
+   
             if (leftVal > rightVal)
                 return -1;
             else if (leftVal < rightVal)
@@ -1016,15 +970,7 @@ public static void SetItemInfoUpdate(int uniqueID)
 
     public static int Sort2(ItemInfo left, ItemInfo right)
     {
-        // 정렬 기준 
-        // 1. 카테고리 
-        // 2. 랭크
-        // 3. 성급
-        // 4. 레벨
-
-        // compare함수에 넣어줄 경우 왼쪽의 데이터가 클때 1 그리고 오른쪽의 데이터가 클때 -1값을 리턴하면
-        // 오름차순 정렬이 되게 됩니다.
-        // 무기, 방패, 펫 , 포션 오름차순 정렬시킵니다.
+       
         if (left.bitCategory > right.bitCategory)
         {
             return 1;
@@ -1037,16 +983,11 @@ public static void SetItemInfoUpdate(int uniqueID)
 
         else
         {
-            // 랭크와 grade 에 곱해주는 수치값은 차이를 두기위해 설정한 값입니다.
-            // 10000을 곱해주셔도 되고, 1000을 곱해주셔도 상관없습니다.
+           
             int leftVal = left.grade * 10000000 + left.level * 10000;
             int rightVal = right.grade * 10000000 + right.level * 10000;
 
-            //left.cost = leftVal;
-            //right.cost = rightVal;
-
-            // 랭크를 구별할때는 좋은 랭크부터 정렬시키려고 합니다.
-            // 따라서 왼쪽이 클때는 -1 오른쪽이 클때는 1값을 리턴합니다.
+       
             if (leftVal > rightVal)
                 return 1;
             else if (leftVal < rightVal)
@@ -1066,25 +1007,6 @@ public static void SetItemInfoUpdate(int uniqueID)
     public static Dictionary<string, Dictionary<int, Quest>> currQuestDic =
         new Dictionary<string, Dictionary<int, Quest>>();
 
-    //public static Dictionary<string, Dictionary<int, Quest>> clearQuestDic =
-    //    new Dictionary<string, Dictionary<int, Quest>>();
-
-    //public static Quest CleatQuest(string name, int level)
-    //{
-    //      Quest newQuest = QuestDataManager.CleatQuest(name, level);
-    //    if(newQuest != null)
-    //    {
-    //        if (!currQuestDic.ContainsKey(name))
-    //            currQuestDic.Add(name, new Dictionary<int, Quest>());
-
-    //        if(!currQuestDic[name].ContainsKey(level))
-    //        {
-    //            currQuestDic[name].Add(level, newQuest);
-    //            return newQuest;
-    //        }
-    //    }
-    //    return null;
-    //}
 
     public static Quest QuestLoader(SaveQuest saveQuest)
     {

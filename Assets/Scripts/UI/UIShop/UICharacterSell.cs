@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class UICharacterSell : BaseUI
 {
-    // 인벤토리의 슬롯의 카운트
-    //private int slotCount = 100;
+
 
     private int contentHeight = 225;
     private int contentWidth = 230;
@@ -26,12 +25,8 @@ public class UICharacterSell : BaseUI
     private UICharacterInvenItem invenCharPrefab;
 
     public List<UICharacterInvenItem> invenCharList = new List<UICharacterInvenItem>();
-    //private Dictionary<int, UIInvenItem> invenItemDic = new Dictionary<int, UIInvenItem>();
+
     private List<PlayerInfo> charList = new List<PlayerInfo>();
-
-    // 인벤 아이템 목록을 저장함 부모 위치
-    //private GridLayoutGroup gridLayout;
-
     public Job currTab = Job.ALL;
     public JobBit currBitTab = JobBit.ALL;
 
@@ -62,8 +57,6 @@ public class UICharacterSell : BaseUI
     public void SetUITab(Job job)
     {
 
-        //if (currTab == category)
-        //    return;
 
         currTab = job;
         System.Enum.TryParse<JobBit>(currTab.ToString(), out currBitTab);
@@ -137,23 +130,20 @@ public class UICharacterSell : BaseUI
     public void SetItemList(List<PlayerInfo> charlist)
     {
         scroll.normalizedPosition = new Vector2(0, 1);
-        //invenItemDic.Clear();
+       
         charList.Clear();
-        //Clear();
+        
         for (int i = 0; i < charlist.Count; ++i)
         {
 
-            //invenItemList[i].SetInfo(itemlist[i], characterJob);
+
 
             charList.Add(charlist[i]);
 
-
-            // 아이템 갱신등이 발생될때 데이터를 갱신하기 위한 딕셔너리 입니다.
             if (i < invenCharList.Count)
             {
                 SetData(invenCharList[i], i);
 
-                //invenItemDic.Add(itemlist[i].uniqueID, invenItemList[i]);
 
             }
 
@@ -207,10 +197,6 @@ public class UICharacterSell : BaseUI
         tabFocus = transform.Find("TabFocus");
 
         CreateContent(4);
-
-
-        //CreateEmptySlot(slotCount);
-
 
         SetUITab(Job.ALL);
         if (GameDB.userInfo != null)
@@ -328,9 +314,6 @@ public class UICharacterSell : BaseUI
             }
 
 
-            //else if(i >((contentRow -2) * contentCol))
-            //    content.SetActive(false);
-
 
         }
     }
@@ -373,9 +356,6 @@ public class UICharacterSell : BaseUI
             ++contentSizeHeight;
         }
 
-
-
-        // 콘텐츠 컴포넌트의 놓이를 정한다.
         scroll.content.sizeDelta = new Vector2(scroll.content.sizeDelta.x, contentSizeHeight * contentHeight);
         scroll.normalizedPosition = new Vector2(0, 1);
     }

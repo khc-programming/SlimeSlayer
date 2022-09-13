@@ -62,11 +62,11 @@ public class UIInvenItem : UIItem
     {
         itemInfo = info;
 
-        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
+        
         if (info != null)
         {
             
-            //아이템 아이콘 설정
+          
             if (icon != null)
             {
                 icon.gameObject.SetActive(true);
@@ -86,7 +86,7 @@ public class UIInvenItem : UIItem
                 }
             }
 
-            // 아이템 레벨 설정
+       
             if (levelText != null)
             {
                 levelText.text = "LV." + info.level.ToString();
@@ -94,7 +94,7 @@ public class UIInvenItem : UIItem
             }
 
            
-            // 별 등급 표시
+            
             for (int i = star.Count - 1; i >= 0; --i)
             {
                 if ((info.grade - 1) < i)
@@ -171,7 +171,7 @@ public class UIInvenItem : UIItem
         if (priceText != null) priceText.gameObject.SetActive(false);
         if (checkBox != null) checkBox.gameObject.SetActive(false);
 
-        //if (slotImg != null) slotImg.gameObject.SetActive(false);
+        
 
         foreach (var img in star)
             img.gameObject.SetActive(false);

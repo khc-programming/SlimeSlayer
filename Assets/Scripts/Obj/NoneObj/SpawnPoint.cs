@@ -13,7 +13,7 @@ public class SpawnPoint : MonoBehaviour
 
     public void Create()
     {
-       // uniqueID = UnitMng.Instance.AddAsync(tableID, LV ,transform.position, transform.rotation);
+      
 
         switch(unitType)
         {
@@ -49,11 +49,7 @@ public class SpawnPoint : MonoBehaviour
        
     }
 
-    public void Create2()
-    {
-        //uniqueID = UnitMng.Instance.AddAsync2(tableID, LV, transform.position, transform.rotation);
-        
-    }
+   
 
 
     public bool IsCreated

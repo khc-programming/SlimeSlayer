@@ -134,7 +134,7 @@ public class UIMinimap : BaseUI
             rpgBackground.SetTarget(player);
         }
 
-        // 3D 월드의 사이즈를 구합니다.
+        // 3D 월드의 사이즈를 구한다.
         GameObject min = GameObject.Find("Min");
         GameObject max = GameObject.Find("Max");
         float worldWidth = 0;
@@ -144,7 +144,7 @@ public class UIMinimap : BaseUI
             worldWidth = Mathf.Abs(min.transform.position.x - max.transform.position.x);
             worldDepth = Mathf.Abs(min.transform.position.y - max.transform.position.y);
             Vector2 sizeDelta = rpgBackground.SizeDelta;
-            // 미니맵이 사용할 좌표 크기값을 설정합니다.
+            // 미니맵이 사용할 좌표 크기값을 설정
             MinimapHelper.Setting(worldWidth, worldDepth, sizeDelta.x, sizeDelta.y);
         }
 

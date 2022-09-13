@@ -41,14 +41,5 @@ public class DrawGizmos : MonoBehaviour
     }
 
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
+ 
 }

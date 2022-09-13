@@ -41,8 +41,7 @@ public class UIQuest : BaseUI
 
     public override void Run()
     {
-        //if (eventHandler != null)
-        //    eventHandler.Run();
+ 
         if (questContents != null)
             questContents.Run();
     }
@@ -59,8 +58,5 @@ public class UIQuest : BaseUI
 
     #endregion
 
-    //private void Update()
-    //{
-    //    Run();
-    //}
+    
 }

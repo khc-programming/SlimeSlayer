@@ -5,7 +5,7 @@ using TMPro;
 
 public class UIDestoryEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     TMP_Text getGoldText;
     public bool isUpdate = true;
 
@@ -22,7 +22,7 @@ public class UIDestoryEffect : MonoBehaviour
         if(getGoldText != null) getGoldText.text = string.Format("{0:#,0}", gold);
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
         if(isUpdate)

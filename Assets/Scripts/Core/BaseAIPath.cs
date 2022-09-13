@@ -54,8 +54,6 @@ public abstract class BaseAIPath : MonoBehaviour
         enabled = state;
     }
 
-    private void Update()
-    {
-
-    }
+    
 }
+

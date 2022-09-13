@@ -46,10 +46,6 @@ public class UIInfoButton : BaseUI,
         
 
         box.SetActive(true);
-        //UIMng.Instance.Get<UIInfoBox>(UIType.UIInfoBox).SetActive(true);
-
-        //UIMng.Instance.Get<UIIngame>(UIType.UIIngame).SetActive(false);
-
 
     }
 

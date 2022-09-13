@@ -38,3 +38,4 @@ public abstract  class Mng<T> : TSingleton<T> where T : Mng<T>
         }
     }
 }
+

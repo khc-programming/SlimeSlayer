@@ -97,8 +97,6 @@ public class Target : MonoBehaviour
         
         if (targetBoxRoot != null)
         {
-            //if (gameObject.name == "Prefab_Slime(Clone)" && path == false)
-            //    print("set"); 
             targetBoxRoot.gameObject.SetActive(path);
         } 
 
@@ -112,9 +110,6 @@ public class Target : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-       // LookAt2D();
-    }
+ 
 
 }

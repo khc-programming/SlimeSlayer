@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class UIGambler : BaseUI
 {
-    //private Button leftBtn;
-    //private Button rightBtn;
+   
     GridLayoutGroup gridLayout;
 
     public Button charBtn1;
@@ -14,16 +13,10 @@ public class UIGambler : BaseUI
     public Button itemBtn1;
     public Button itemBtn10;
 
-    // 교체시 호출될 델리게이트
+    
     private System.Action charBtn1Delegate;
-
-    // 구매시 호출될 델리게이트
     private System.Action charBtn10Delegate;
-
-    // 판매시 호출될 델리게이트
     private System.Action itemBtn1Delegate;
-
-    // 강화시 호출될 델리게이트
     private System.Action itemBtn10Delegate;
 
 
@@ -87,11 +80,6 @@ public class UIGambler : BaseUI
        
 
         gridLayout = GetComponentInChildren<GridLayoutGroup>(true);
-        
-
-        //leftBtn = GetComponentInChildren<Button>(true); 
-        //rightBtn = GetComponentInChildren<Button>(true);
-
         charBtn1 = UtilHelper.FindButton(gridLayout.transform, "CharacterGamble/CharBtn1", OnClickCharBtn1);
         charBtn10 = UtilHelper.FindButton(gridLayout.transform, "CharacterGamble/CharBtn10", OnClickCharBtn10);
         itemBtn1 = UtilHelper.FindButton(gridLayout.transform, "ItemGamble/ItemBtn1", OnClickItemBtn1);

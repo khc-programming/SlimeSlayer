@@ -42,7 +42,7 @@ public class UICharacterTab : MonoBehaviour
 
     
 
-    // Start is called before the first frame update
+  
     public void Init()
     {
         highlight = transform.Find("Highlight");

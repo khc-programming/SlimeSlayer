@@ -17,7 +17,6 @@ public class UITabBtns : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     public void Init()
     {
         uiTabs.AddRange(GetComponentsInChildren<UITab>(true));
@@ -70,10 +69,5 @@ public class UITabBtns : MonoBehaviour
 
     }
 
-   
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+ 
 }

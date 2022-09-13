@@ -16,10 +16,7 @@ public class UIGamble : BaseUI
     GambleInputEventHandler eventHandler;
     public static TMP_Text moneyText;
 
-    //private void Start()
-    //{
-    //    Init();
-    //}
+ 
 
     #region //추상 함수 정의부
     public override void Init()
@@ -47,12 +44,8 @@ public class UIGamble : BaseUI
 
 
         eventHandler = GetComponent<GambleInputEventHandler>();
-        //if (eventHandler != null) eventHandler.Init();
-
         moneyText = UtilHelper.Find<TMP_Text>(transform, "UIGambleBox/MoneyBox/MoneyText");
 
-        
-        //moneyText.text = string.Format("{0:#,0000000000000000000000}", GameDB.money);
 
     }
 

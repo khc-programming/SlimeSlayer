@@ -29,7 +29,6 @@ public class GambleMan : NPC
     private void delayQuest()
     {
         UIMng.Instance.Get<UIGamble>(UIType.UIGamble).SetActive(true);
-        //UIGamble gamble = UIMng.Instance.Get<UIGamble>(UIType.UIGamble);
-        //gamble.SetUITab();
+  
     }
 }

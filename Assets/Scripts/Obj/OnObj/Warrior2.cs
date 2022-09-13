@@ -136,7 +136,7 @@ public class Warrior2 : Player
                     tempWind03.setInfo(10, weapon.color, playerInfo.skillList[2].level, this.unitType, playerInfo.lastState[0]);
                     tempWind03.Shoot();
 
-                    //tempWind02.Shoot();
+            
                 }
             }
 

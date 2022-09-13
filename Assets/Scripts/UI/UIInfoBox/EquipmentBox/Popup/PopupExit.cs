@@ -22,6 +22,6 @@ public class PopupExit : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
     }
 
-    // Update is called once per frame
+
 
 }

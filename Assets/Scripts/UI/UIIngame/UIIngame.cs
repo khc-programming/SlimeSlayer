@@ -7,7 +7,7 @@ public class UIIngame : BaseUI
 {
     private UIJoystick joystick;
     private UIPlayerHP playerHP;
-   // private UIMenuButton menuButton;
+   
     private UIInfoButton infoButton;
     private UIMinimap miniMap;
     private UIHpMng hpMng;
@@ -31,7 +31,7 @@ public class UIIngame : BaseUI
         joystick = GetComponentInChildren<UIJoystick>(true);
         if (joystick != null)
             joystick.Init();
-        // menuButton = GetComponentInChildren<UIMenuButton>(true);
+        
 
         infoButton = GetComponentInChildren<UIInfoButton>(true);
         if (infoButton != null)
@@ -115,7 +115,7 @@ public class UIIngame : BaseUI
             playerHP.SetActive(true);
             infoButton.SetActive(true);
             getGold.gameObject.SetActive(true);
-            //getGold.text = "GOLD";
+            
             
         }
         else if (GameDB.currSceneType == SceneType.BossScene)

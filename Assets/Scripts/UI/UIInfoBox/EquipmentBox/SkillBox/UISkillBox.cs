@@ -49,7 +49,7 @@ public class UISkillBox : BaseUI
 
     }
 
-    // Start is called before the first frame update
+    
 
 
     public void SetUpdate()
@@ -150,7 +150,7 @@ public class UISkillBox : BaseUI
     }
     private void SetContentHight()
     {
-        // 콘텐츠 컴포넌트의 놓이를 정한다.
+        
         scroll.content.sizeDelta = new Vector2(scroll.content.sizeDelta.x, saveSkillList.Count * itemHeight);
         scroll.normalizedPosition = new Vector2(0, 1);
     }
@@ -158,8 +158,6 @@ public class UISkillBox : BaseUI
     private void CreateItem()
     {
         
-        // 콘텐츠 컴포넌트의에 넣을 uicontent을 생성한다.
-        //RectTransform scrollRect = scroll.GetComponent<RectTransform>();
 
         itemCount = 0;
 
@@ -301,16 +299,5 @@ public class UISkillBox : BaseUI
 
     #endregion
 
-
-    //private void Update()
-    //{
-
-    //    if(Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        scroll.normalizedPosition = v;
-    //    }
-
-    //    Run();
-    //}
 
 }

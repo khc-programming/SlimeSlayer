@@ -69,7 +69,7 @@ public class Wizard1 : Player
     public void Shoot()
     {
         
-        //dard02Count++;
+        
         Vector3 ShPos = getModel.getTarget.getCenter.position;
         Vector3 ShDir = getModel.getTarget.getTargetPosDir;
         ShDir.Normalize();
@@ -108,13 +108,9 @@ public class Wizard1 : Player
             
         }
         
-        
+       
 
-
-        //if (dard02Count > 2)
-        //{
-
-            if (dark02 != null && playerInfo.isSkill2)
+        if(dark02 != null && playerInfo.isSkill2)
         {
                 
                 
@@ -159,17 +155,6 @@ public class Wizard1 : Player
 
                 }
             }
-            
-
-            
-            
-            
-
-
-
-
-            //dard02Count = 0;
-        //}
 
     }
 

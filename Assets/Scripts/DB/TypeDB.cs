@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-// 선언된 열거형의 이름은 신 파일과 동일한 이름을 
-// 갖도록 설정해야 합니다.
 public enum MngType
 {
     None = 0,
@@ -16,7 +13,6 @@ public enum MngType
     AIPathMng = 32,
     ControlMng = 64,
     AudioMng = 128,
-    QuestMng = 256
 
 }
 
@@ -175,3 +171,4 @@ public enum NPCNameType
     GambleMan = 3,
     KingMan = 4
 }
+

@@ -22,7 +22,7 @@ public class SceneMng : Mng<SceneMng>
     public SceneType Current
         { get { return current; } }
     // 전체를 순회하면서 매개변수와 같은 신의 체크박스만
-    // 활성화하는 함수입니다.
+    // 활성화하는 함수
 
 
     #region // Mng 추상 메소드 정의부
@@ -51,19 +51,19 @@ public class SceneMng : Mng<SceneMng>
 
     public override void OnActive()
     {
-       // GameDB.MngEnabled += (int)MngType.SceneMng;
+      
     }
     public override void OnDeactive()
     {
-       //GameDB.MngEnabled -= (int)MngType.SceneMng;
+       
     }
     public override void OnGameEnable()
     {
-       // GameDB.MngEnabled += (int)MngType.SceneMng;
+       
     }
     public override void OnGameDisable()
     {
-        //GameDB.MngEnabled -= (int)MngType.SceneMng;
+       
     }
 
     public override void SetActive(bool state)
@@ -111,7 +111,7 @@ public class SceneMng : Mng<SceneMng>
         where T : Scene
     {
         // 신이 등록되어 있지 않다면 게임 오브젝트를 만들고,
-        // 신 스크립트를 연결후 신 매니저에 등록합니다.
+        // 신 스크립트를 연결후 신 매니저에 등록
         if (sceneDic.ContainsKey(sType) == false)
         {
            
@@ -122,7 +122,7 @@ public class SceneMng : Mng<SceneMng>
             return t;
         }
         sceneDic[sType].enabled = state;
-        // 신이 등록되어 있는 상태라면 찾아서 리턴합니다.
+        // 신이 등록되어 있는 상태라면 찾아서 리턴
         return sceneDic[sType] as T;
     }
 
@@ -131,13 +131,13 @@ public class SceneMng : Mng<SceneMng>
                         bool falseLoading = false,
                         float targetTime = 2.0f)
     {
-        // 이동하고자하는 신이 등록된 상태라면 처리합니다.
+        // 이동하고자하는 신이 등록된 상태라면 처리
         if (sceneDic.ContainsKey(scene))
         {
-            // 해당되는 신의 스크립트만 켜줍니다.
+            // 해당되는 신의 스크립트만 켜준다.
             Enable(scene);
 
-            // 신을 비동기로 로드합니다.
+            // 신을 비동기로 로드
             LoadAsync(scene, idx);
         }
     }
@@ -173,14 +173,13 @@ public class SceneMng : Mng<SceneMng>
 
     private IEnumerator IELoadAsync(SceneType nextScene, int idx = 0)
     {
-        // 비동기로 신을 로드합니다.
+        // 비동기로 신을 로드
         // 신을 로드하는 함수를 사용하게 되면, 
-        // 신에 배치되어있는 물체들은 삭제됩니다.
+        // 신에 배치되어있는 물체들은 삭제
         AsyncOperation operation =
                 SceneManager.LoadSceneAsync(nextScene.ToString() + idx);
 
-        // 이미지 개수가 300개정도되는 대형파일 - 3초정도
-        //FadeUI ui = Resources.Load<FadeUI>("UI/FadeUI");
+        
 
         bool state = false;
 
@@ -189,15 +188,15 @@ public class SceneMng : Mng<SceneMng>
             if (sceneDic.ContainsKey(nextScene))
                 sceneDic[nextScene].Progress(operation.progress);
 
-            // 신이 모두 로드된 상태라면 처리합니다.
+            // 신이 모두 로드된 상태라면 처리
             if (operation.isDone)
             {
                 state = true;
-                // 이전 신의 Exit함수를 호출합니다.
+                // 이전 신의 Exit함수를 호출
                 if (sceneDic.ContainsKey(current))
                     sceneDic[current].Exit();
 
-                // 변경되는 신의 Enter함수를 호출합니다.
+                // 변경되는 신의 Enter함수를 호출
                 if (sceneDic.ContainsKey(nextScene))
                     sceneDic[nextScene].Enter();
                 // 현재 신을 변경합니다.
@@ -210,17 +209,17 @@ public class SceneMng : Mng<SceneMng>
         }
     }
 
-    // 안드로이드등에서 포커스가 맞춰질 경우 호출되는 함수입니다.
+    // 안드로이드등에서 포커스가 맞춰질 경우 호출되는 함수
     private void OnApplicationFocus(bool focus)
     {
 
     }
-    // 안드로이드등에서 홈키를 눌렀을때 호출되는 함수입니다.
+    // 안드로이드등에서 홈키를 눌렀을때 호출되는 함수
     private void OnApplicationPause(bool pause)
     {
 
     }
-    // 프로그램이 종료될때 Release함수를 호출합니다.
+    // 프로그램이 종료될때 Release함수를 호출
     private void OnApplicationQuit()
     {
         Release();

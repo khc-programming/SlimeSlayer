@@ -20,8 +20,7 @@ public class MonsterInfo :ShareInfo
     public int basicDefence;
     public int defence;
     public int basicHp;
-    //public int hp;
-    //public int currHp;
+  
     public float speed;
     public float currSpeed;
 
@@ -210,14 +209,6 @@ public class Monster : Unit
         }
 
 
-
-        //if (getModel.IsTag("Damage"))
-        //{
-
-        //    return;
-        //}
-
-        //damageElap = 0;
         int damage = monsterInfo.lastState[1] - attack;
         if (damage < 0)
         {
@@ -245,7 +236,7 @@ public class Monster : Unit
             Vector3 v = transform.position;
             v += Vector3.up;
                 Vector3 viewPos = Camera.main.WorldToScreenPoint(v);
-                //transform.position = viewPos;
+                
             gold = Instantiate(gold, viewPos , Quaternion.identity, UIMng.Instance.Get<UIIngame>(UIType.UIIngame).transform);
 
 
@@ -268,7 +259,7 @@ public class Monster : Unit
 
             if (getModel.getColl2D != null)
                 getModel.getColl2D.enabled = false;
-            // NewMonster컴포넌트가 실행되지 않도록 처리합니다.
+            
             enabled = false;
 
 

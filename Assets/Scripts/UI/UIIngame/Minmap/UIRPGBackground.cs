@@ -35,13 +35,11 @@ public class UIRPGBackground : MonoBehaviour
         player = target;
     }
 
-    // Update is called once per frame
+
     public void Run()
     {
         if (rectTransform == null || player == null)
             return;
-
-        // 플레이어의 위치값을 기준으로 rectTransform이 이동되도록 설정합니다.
         MinimapHelper.MarkOnTheRPGGame(player, rectTransform);
     }
 

@@ -126,7 +126,7 @@ public class UpgradeInputEventHandler : MonoBehaviour
             return;
         }
         AudioMng.Instance.PlayUI("UI_Button");
-        // && info.sprite != null 처리는 왜 하는 걸까?
+    
         if (info != null && info.sprite != null)
         {
             PopupOpen(info);
@@ -148,8 +148,6 @@ public class UpgradeInputEventHandler : MonoBehaviour
 
         int tempInt = 0;
 
-        //tempInt = info.price / 10;
-        //tempInt *= info.level;
         tempInt = info.grade * 1000;
         tempInt += (info.grade * 100) * (info.level - 1);
 

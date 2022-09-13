@@ -98,8 +98,6 @@ public class UIEquipmentBox : BaseUI
 
         moneyText = UtilHelper.Find<TMP_Text>(transform, "MoneyBox/MoneyText");
 
-        // moneyText.text = string.Format("{0:#,0000000000000000000000}", GameDB.money);
-
         isInit = true;
 
     }

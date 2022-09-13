@@ -17,10 +17,6 @@ public class UIQuestButton : BaseUI,
         spriteColor = GetComponent<SpriteColor>();
         if (spriteColor != null) spriteColor.Init();
 
-        
-
-
-
 
     }
     public override void Run()

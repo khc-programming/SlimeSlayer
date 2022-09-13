@@ -10,52 +10,12 @@ private Unit player;
 //private Unit readTarget;
 private CameraMove cameraMove;
 
-    public static bool skill1 = true;
-    public static bool skill2 = true;
-    public static bool skill3 = true;
-    
-
     #region // Mng 추상 메소드 정의부
 
     
 
     public override void Run()
     {
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            if(skill1 == true)
-            {
-                skill1 = false;
-            }
-            else
-            {
-                skill1 = true;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            if (skill2 == true)
-            {
-                skill2 = false;
-            }
-            else
-            {
-                skill2 = true;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            if (skill3 == true)
-            {
-                skill3 = false;
-            }
-            else
-            {
-                skill3 = true;
-            }
-        }
-
 
         if ((GameDB.MngEnabled & (int)MngType.ControlMng) != (int)MngType.ControlMng)
             return;
@@ -75,8 +35,7 @@ private CameraMove cameraMove;
 
                     // 유닛 매니저가 가지고 있는 유닛 사전 목록에서 이전 모델을 지우고 새 모델을 값을 넣는다.
                     UnitMng.Instance.ChangeUnit(p.GetPlayerInfo.spawnID, p);
-                    // 이전 모델의 현재 hp 정보를 새 모델에 담는다.
-                    //p.GetPlayerInfo.currHp = GameDB.player.GetPlayerInfo.currHp;
+                    
                     Destroy(GameDB.player.gameObject);
                     GameDB.player = p;
                 }
@@ -97,7 +56,7 @@ private CameraMove cameraMove;
                     back.player = GameDB.player.transform;
 
                 GameDB.player.changeHpBar();
-                //print("현재 체력 = " + GameDB.player.GetPlayerInfo.currHp);
+                
 
             }
 
@@ -218,7 +177,7 @@ private CameraMove cameraMove;
                             Object g = Resources.Load("Prefab/UI/UIClear");
                             Instantiate(g);
                             UnitMng.Instance.PauseAll();
-                            //UIMng.Instance.Get<UIIngame>(UIType.UIIngame).Open(true);
+                            
                             UIMng.Instance.SetEventSystme(true);
 
                         }
@@ -257,7 +216,7 @@ private CameraMove cameraMove;
                             Instantiate(g);
                             UnitMng.Instance.PauseAll();
                             
-                            //UIMng.Instance.Get<UIIngame>(UIType.UIIngame).Open(false);
+                            
                             UIMng.Instance.SetEventSystme(true);
 
                             player.isDie = true;
@@ -280,10 +239,7 @@ private CameraMove cameraMove;
                         {
                             GameDB.targetRead = false;
                             player.Move(uiIngame.Dir2D);
-                            //if(Input.GetKey(KeyCode.Space))
-                            //{
-                            //    player.Attack();
-                            //}
+                        
                             if(UnitMng.pause == false)
                                 player.Attack();
                         }
@@ -390,17 +346,17 @@ private CameraMove cameraMove;
 
     public override void OnActive()
     {
-       // enableChang(MngType.ControlMng, true);
+      
         
     }
     public override void OnDeactive()
     {
-        //enableChang(MngType.ControlMng, false);
+       
         
     }
     public override void OnGameEnable()
     {
-        //enableChang(MngType.ControlMng, true);
+        
         
         GetPlayer();
         setCamer();
@@ -409,7 +365,7 @@ private CameraMove cameraMove;
     }
     public override void OnGameDisable()
     {
-       // enableChang(MngType.ControlMng, false);
+       
         
     }
 
@@ -457,12 +413,5 @@ public void GetPlayer()
 }
 
 
-    
-
-    private void Update()
-{
-    
-
-}
 
 }

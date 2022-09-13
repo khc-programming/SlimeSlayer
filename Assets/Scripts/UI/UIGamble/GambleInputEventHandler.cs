@@ -33,7 +33,7 @@ public class GambleInputEventHandler : MonoBehaviour
 
     private bool isCoroutine = false;
 
-    //public Vector2 v;
+  
 
     public static Vector2 gamblePivot = Vector2.zero;
 

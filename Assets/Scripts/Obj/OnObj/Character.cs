@@ -118,7 +118,7 @@ public  class Character : Unit
 
             if (getModel.getColl2D != null)
                 getModel.getColl2D.enabled = false;
-            // NewMonster컴포넌트가 실행되지 않도록 처리합니다.
+            
             enabled = false;
         }
         else

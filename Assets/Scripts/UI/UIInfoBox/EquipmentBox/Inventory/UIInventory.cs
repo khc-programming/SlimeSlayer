@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class UIInventory : BaseUI
 {
-    // 인벤토리의 슬롯의 카운트
-    //private int slotCount = 100;
-
+  
     private int contentHeight = 225;
     private int contentWidth = 230;
     private int contentCount = 0;
@@ -26,11 +24,10 @@ public class UIInventory : BaseUI
     private UIInvenItem invenItemPrefab;
 
     public List<UIInvenItem> invenItemList = new List<UIInvenItem>();
-    //private Dictionary<int, UIInvenItem> invenItemDic = new Dictionary<int, UIInvenItem>();
+   
     private List<ItemInfo> itemList = new List<ItemInfo>();
 
-    // 인벤 아이템 목록을 저장함 부모 위치
-    //private GridLayoutGroup gridLayout;
+ 
 
     public ItemCategory currTab = ItemCategory.ALL;
     public ItemBitCategory currBitTab = ItemBitCategory.ALL;
@@ -62,8 +59,7 @@ public class UIInventory : BaseUI
     public void SetUITab(ItemCategory category)
     {
 
-        //if (currTab == category)
-        //    return;
+    
 
         currTab = category;
         System.Enum.TryParse<ItemBitCategory>(currTab.ToString(), out currBitTab);
@@ -141,23 +137,17 @@ public class UIInventory : BaseUI
     public void SetItemList(List<ItemInfo> itemlist, int characterJob)
     {
         scroll.normalizedPosition = new Vector2(0, 1);
-        //invenItemDic.Clear();
+        
         itemList.Clear();
-        //Clear();
+       
         for (int i = 0; i < itemlist.Count; ++i)
         {
 
-            //invenItemList[i].SetInfo(itemlist[i], characterJob);
-
             itemList.Add(itemlist[i]);
 
-
-            // 아이템 갱신등이 발생될때 데이터를 갱신하기 위한 딕셔너리 입니다.
             if (i < invenItemList.Count)
             {
                 SetData(invenItemList[i], i, characterJob);
-                
-                //invenItemDic.Add(itemlist[i].uniqueID, invenItemList[i]);
 
             }
                 
@@ -210,10 +200,6 @@ public class UIInventory : BaseUI
         tabFocus = transform.Find("TabFocus");
 
         CreateContent(4);
-
-        
-        //CreateEmptySlot(slotCount);
-
 
         SetUITab(ItemCategory.ALL);
         if(GameDB.userInfo != null)
@@ -339,11 +325,6 @@ public class UIInventory : BaseUI
                 
                 content.SetInfo(itemList[i]);
             }
-                
-
-            //else if(i >((contentRow -2) * contentCol))
-            //    content.SetActive(false);
-
             
         }
     }

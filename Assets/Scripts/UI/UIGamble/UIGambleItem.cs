@@ -41,7 +41,7 @@ public class UIGambleItem : BaseUI
     {
         itemInfo = info;
 
-        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
+        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정
         if (info != null)
         {
 

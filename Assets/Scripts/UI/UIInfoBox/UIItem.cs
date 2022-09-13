@@ -12,7 +12,6 @@ public class UIItem : BaseUI
 
     public override void Init()
     {
-        //itemInfo = new ItemInfo();
     }
 
     public override void Run()

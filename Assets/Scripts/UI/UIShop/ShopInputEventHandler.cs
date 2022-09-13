@@ -25,7 +25,6 @@ public class ShopInputEventHandler : MonoBehaviour
     Button takeOffCharSell;
     
 
-    // 클릭한 아이템 정보
     public static ItemInfo selected;
     public static PlayerInfo charSelected;
 
@@ -37,7 +36,6 @@ public class ShopInputEventHandler : MonoBehaviour
         {
             itemBuy.UITabClickEvent(UIShopTabOnClick);
             itemBuy.UIInvenItemClickEvent(UIShopItemOnClick);
-            //itemBuy.SetItemList(GameDB.GetItems((int)ItemBitCategory.ALL));
         }
 
         
@@ -46,7 +44,6 @@ public class ShopInputEventHandler : MonoBehaviour
         {
             itemSell.UITabClickEvent(UITabOnClick);
             itemSell.UIInvenItemClickEvent(UIInvenItemOnClick);
-            //itemSell.SetItemList(GameDB.GetItems((int)ItemBitCategory.ALL), (int)GameDB.userInfo.jobType);
         }
 
         charBuy = GetComponentInChildren<UICharacterBuy>(true);
@@ -54,7 +51,6 @@ public class ShopInputEventHandler : MonoBehaviour
         {
             charBuy.UITabClickEvent(UIShopTabOnClick);
             charBuy.UIInvenItemClickEvent(UIShopItemOnClick);
-            //charBuy.SetItemList(GameDB.GetCharAllList((int)JobBit.ALL));
         }
 
         charSell = GetComponentInChildren<UICharacterSell>(true);
@@ -62,7 +58,6 @@ public class ShopInputEventHandler : MonoBehaviour
         {
             charSell.UITabClickEvent(UITabOnClick);
             charSell.UIInvenItemClickEvent(UIInvenItemOnClick);
-           // charSell.SetItemList(GameDB.GetCharList((int)JobBit.ALL));
         }
 
         itemPopup = GetComponentInChildren<UIItemPopup>(true);
@@ -159,8 +154,6 @@ public class ShopInputEventHandler : MonoBehaviour
             return;
         }
 
-        
-            // && info.sprite != null 처리는 왜 하는 걸까?
             if (info != null && info.sprite != null)
             {
                 PopupOpen(info);
@@ -215,13 +208,6 @@ public class ShopInputEventHandler : MonoBehaviour
         }
         
 
-        //if (itemPopup != null)
-        //{
-        //    // 나중에는 스케일 애니메이션 추가할 것.
-        //    itemPopup.gameObject.SetActive(false);
-        //}
-
-        //itemPopup.Close();
 
 
     }
@@ -265,7 +251,7 @@ public class ShopInputEventHandler : MonoBehaviour
 
             if (itemPopup != null)
             {
-                // 나중에는 스케일 애니메이션 추가할 것.
+            
                 itemPopup.gameObject.SetActive(false);
             }
 
@@ -351,13 +337,6 @@ public class ShopInputEventHandler : MonoBehaviour
         }
 
 
-        //if (itemPopup != null)
-        //{
-        //    // 나중에는 스케일 애니메이션 추가할 것.
-        //    itemPopup.gameObject.SetActive(false);
-        //}
-
-        //itemPopup.Close();
 
 
     }
@@ -398,7 +377,7 @@ public class ShopInputEventHandler : MonoBehaviour
 
             if (charPopup != null)
             {
-                // 나중에는 스케일 애니메이션 추가할 것.
+              
                 charPopup.gameObject.SetActive(false);
             }
 
@@ -461,7 +440,7 @@ public class ShopInputEventHandler : MonoBehaviour
             return;
         }
         AudioMng.Instance.PlayUI("UI_Button");
-        // && info.sprite != null 처리는 왜 하는 걸까?
+ 
         if (info != null && info.sprite != null)
             {
                PopupOpen(info);
@@ -480,13 +459,13 @@ public class ShopInputEventHandler : MonoBehaviour
         bool onBuyBtnState = false;
         bool onSellBtnState = false;
 
-        //if(GameDB.money >= info.cost && info.uniqueID == -1)
+   
         if (info.uniqueID == -1)
         {
             onBuyBtnState = true;
         }
 
-        //if (info.equip == false && info.uniqueID != -1)
+        
         if (info.uniqueID != -1)
         {
             onSellBtnState = true;
@@ -504,13 +483,13 @@ public class ShopInputEventHandler : MonoBehaviour
         bool onBuyBtnState = false;
         bool onSellBtnState = false;
 
-        //if(GameDB.money >= info.cost && info.uniqueID == -1)
+       
         if (info.uniqueID == -1)
         {
             onBuyBtnState = true;
         }
 
-        //if (info.equip == false && info.uniqueID != -1)
+       
         if (info.uniqueID != -1)
         {
             onSellBtnState = true;

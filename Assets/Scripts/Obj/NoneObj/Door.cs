@@ -14,3 +14,4 @@ public class Door : MonoBehaviour
          coll2D = GetComponent<BoxCollider2D>();
     }
 }
+

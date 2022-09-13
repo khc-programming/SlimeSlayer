@@ -95,13 +95,12 @@ public class UITitle : BaseUI
             }
 
             GameDB.SetCharInfo(1, 1, GameDB.userInfo.uniqueCount++, true, new int[] { 0, 0, 0 }, tempSaveSkillList);
-            //GameDB.userInfo.listOfChar.AddRange(GameDB.charDic.Values);
+            
             GameDB.SetCharInfoUpdate(GameDB.userInfo.uniqueCount - 1);
             GameDB.userInfo.jobType = GameDB.charDic[GameDB.userInfo.uniqueCount - 1].jobType;
             GameDB.userInfo.SetCharUniqueID = GameDB.charDic[GameDB.userInfo.uniqueCount - 1].uniqueID;
 
-            //UIInfoBox box = UIMng.Instance.Get<UIInfoBox>(UIType.UIInfoBox);
-            //box.EquipItem(GameDB.GetChar(GameDB.userInfo.charUniqueID));
+         
         }
 
 
@@ -110,7 +109,7 @@ public class UITitle : BaseUI
         UIMng.Instance.FadeOutDelay(0f);
 
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
-        //isStart2 = false;
+   
     }
 
     public void ContinueBtn()
@@ -135,7 +134,7 @@ public class UITitle : BaseUI
         AudioMng.Instance.PlayUI("UI_Button");
         GameDB.Load("PlayerInfo.json");
         
-        //GameDB.player.GetPlayerInfo.isUpdate = false;
+       
 
         UIInventory i = GameObject.FindObjectOfType<UIInventory>(true);
         i.SetUITab(ItemCategory.ALL);

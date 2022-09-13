@@ -36,11 +36,11 @@ public class UIMenuButton : BaseUI,
         if (GameDB.targetRead == true || UIJoystick.downOn == true)
             return;
         AudioMng.Instance.PlayUI("UI_Button");
-        //UIMng.Instance.Get<UIInfoBox>(UIType.UIInfoBox).SetActive(true);
+        
         UIMng.Instance.Get<UIMenu>(UIType.UIMenu).SetActive(true);
         
         UnitMng.Instance.Pause();
-        //UIMng.Instance.Get<UIIngame>(UIType.UIIngame).SetActive(false);
+        
 
 
     }

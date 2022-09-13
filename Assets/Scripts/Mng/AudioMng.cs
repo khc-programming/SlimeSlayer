@@ -25,7 +25,7 @@ public class AudioMng : Mng<AudioMng>
        
     }
 
-    // 기본적인 설정을 처리하도록 합니다.
+    // 기본적인 설정을 처리
     public void SoundProperty(AudioSource audio,
                               bool loop = false,
                               float spatialBlend = 0,
@@ -78,7 +78,7 @@ public class AudioMng : Mng<AudioMng>
     }
 
     // 오디오 클립의 길이만큼 대기하고 있다가, 
-    // 오디오 소스를 비활성화하는 함수입니다.
+    // 오디오 소스를 비활성화하는 함수
     IEnumerator DeactiveAudio(AudioSource audio)
     {
         if (audio != null && audio.clip != null)
@@ -90,7 +90,7 @@ public class AudioMng : Mng<AudioMng>
     }
 
     // 활성화된 AudioSource가 있다면 찾아서 넘겨주고,
-    // 없으면 생성해서 넘겨준다.!
+    // 없으면 생성해서 넘겨준다.
     private AudioSource Pooling(string audioName = "")
     {
         if (audioName.Equals(string.Empty))
@@ -99,7 +99,7 @@ public class AudioMng : Mng<AudioMng>
         AudioSource source = null;
         for (int i = 0; i < audioSources.Count; ++i)
         {
-            // 비활성화된 오디오 소스를 찾고 active상태를 변경합니다.
+            // 비활성화된 오디오 소스를 찾고 active상태를 변경
             if (audioSources[i].gameObject.activeSelf == false)
             {
                 source = audioSources[i];
@@ -110,7 +110,7 @@ public class AudioMng : Mng<AudioMng>
         {
             // 오디오 소스를 생성하고, 생성된 오디오소스가
             // 신이 변경되더라도 파괴되지 않도록 오디오 매니저의
-            // 하단부분에 배치합니다.
+            // 하단부분에 배치
             GameObject newObject = new GameObject(
                                 audioName, typeof(AudioSource));
 

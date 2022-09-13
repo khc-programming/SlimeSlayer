@@ -102,3 +102,4 @@ public class UISlectCharSlot : BaseUI, IPointerEnterHandler, IPointerExitHandler
 
     #endregion
 }
+

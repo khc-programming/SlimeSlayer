@@ -32,42 +32,42 @@ public class UIItemPopup : BaseUI
 
     public Color maxColor = new Color(0.2f, 0.8f, 0.4f);
 
-    // 착용버튼
+    
     public Button takeOnEquip;
 
-    // 착용해제
+   
     public Button takeOffEquip;
 
-    // 교체버튼
+
     public Button changeEquip;
 
-    // 구매버튼
+  
     public Button takeOnBuy;
 
-    // 판매버튼
+    
     public Button takeOnSell;
 
-    // 업그레이드 버튼
+ 
     public Button takeOnUpgrade;
 
 
 
-    // 해제시에 호출될 델리게이트
+  
     private System.Action<ItemInfo> offEquipDelegate;
 
-    // 착용시 호출될 델리게이트
+    
     private System.Action<ItemInfo> onEquipDelegate;
 
-    // 교체시 호출될 델리게이트
+  
     private System.Action<ItemInfo> changeEquipDelegate;
 
-    // 구매시 호출될 델리게이트
+    
     private System.Action<ItemInfo> onBuyDelegate;
 
-    // 판매시 호출될 델리게이트
+
     private System.Action<ItemInfo> onSellDelegate;
 
-    // 강화시 호출될 델리게이트
+    
     private System.Action<ItemInfo> onUpgradeDelegate;
 
 
@@ -202,9 +202,7 @@ public class UIItemPopup : BaseUI
             }
         }
         
-        
 
-        //wear.text = info.wearFull.Replace("|"," | ");
         if(explain != null) explain.text = info.explain;
         icon.sprite = info.sprite;
 
@@ -233,7 +231,7 @@ public class UIItemPopup : BaseUI
             SetActive(true);
     }
 
-    // 착용 버튼을 클릭하였을때 외부의 착용 코드를 실행합니다.
+   
     public void OnClickEquip()
     {
         if (onEquipDelegate != null)
@@ -243,7 +241,7 @@ public class UIItemPopup : BaseUI
         }
     }
 
-    // 착용 해제 버튼을 클릭하였을때 외부의 착용 해제 코드를 실행합니다.
+   
     public void OnClickOffEquip()
     {
         if (offEquipDelegate != null)
@@ -262,7 +260,7 @@ public class UIItemPopup : BaseUI
         }
     }
 
-    //  구매 버튼을 클릭하였을때 
+   
     public void OnClickBuy()
     {
         if (onBuyDelegate != null)
@@ -272,7 +270,7 @@ public class UIItemPopup : BaseUI
         }
     }
 
-    // 판매 버튼을 클릭하였을때 
+    
     public void OnClickSell()
     {
         if (onSellDelegate != null)
@@ -291,19 +289,19 @@ public class UIItemPopup : BaseUI
         }
     }
 
-    // 착용시 호출될 함수 설정
+
     public void SetOnEquipDelegate(System.Action<ItemInfo> function)
     {
         onEquipDelegate = function;
     }
 
-    // 착용 해제시 호출될 함수 설정
+
     public void SetOffEquipDelegate(System.Action<ItemInfo> function)
     {
         offEquipDelegate = function;
     }
 
-    // 아이템 교체시 호출될 함수 설정
+ 
     public void SetChangeEquipDelegate(System.Action<ItemInfo> function)
     {
         changeEquipDelegate = function;
@@ -314,7 +312,7 @@ public class UIItemPopup : BaseUI
         onBuyDelegate = function;
     }
 
-    // 아이템 교체시 호출될 함수 설정
+    
     public void SetOnSellDelegate(System.Action<ItemInfo> function)
     {
         onSellDelegate = function;

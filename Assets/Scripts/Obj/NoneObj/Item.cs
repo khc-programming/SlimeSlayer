@@ -47,29 +47,9 @@ public class ItemInfo : SaveInfo
 
 }
 
-
-//public class ItemInfo :shareInfo
-//{
-//    public int uniqueID;
-//    public int tableID;
-//    public int LV = 1;
-//    public string name;
-//    public int maxAttack;
-//    public int attack;
-//    public int maxDefence;
-//    public int defence;
-//    public int maxHp;
-//   // public int hp;
-//   // public int currHp;
-//    public float speed;
-//    public float currSpeed;
-
-//    public int weaponID = 4;
-
-//}
 public class Item : Unit
 {
-    // Start is called before the first frame update
+    
     #region _추상함수목록_
     public override void Idle()
     {

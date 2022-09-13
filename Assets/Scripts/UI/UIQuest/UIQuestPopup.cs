@@ -54,11 +54,7 @@ public class UIQuestPopup : BaseUI
         questExplain.text = info.GetString("CONTENT");
         CountCreat();
         RewardCreat();
-        //questCount.text = info.CONTENT;
 
-
-
-        //questReward.text = info.REWARD;
 
         gameObject.SetActive(true);
 
@@ -619,17 +615,11 @@ public class UIQuestPopup : BaseUI
                 }
 
 
-                ///
-
-
-
 
             }
         }
 
 
-        ///////////////////////
-        ///
         if (currQuest.GetQuestCount(QuestType.GAMBLE) != null)
         {
             foreach (var value in currQuest.GetQuestCount(QuestType.GAMBLE))
@@ -699,7 +689,7 @@ public class UIQuestPopup : BaseUI
 
                 }
 
-                //
+                
 
                 else if (value.Key >= 10000 && value.Key < 20000)
                 {
@@ -767,14 +757,14 @@ public class UIQuestPopup : BaseUI
                 }
 
 
-                ///
+            
 
 
 
 
             }
         }
-        ///////////////////////
+       
 
 
 
@@ -900,7 +890,7 @@ public class UIQuestPopup : BaseUI
         rewardBoxScroll = UtilHelper.Find<ScrollRect>(transform, "Frontground/rewardBox/Scroll View");
         
 
-        // gameObject.SetActive(false);
+       
     }
 
     public override void Run()

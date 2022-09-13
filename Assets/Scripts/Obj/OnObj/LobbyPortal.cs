@@ -54,7 +54,7 @@ public class LobbyPortal : Unit
 
     public override void setUpdate()
     {
-        //gameObject.tag = DataManager.ToS(TableType.NONETABLE, tableID, "TAG");
+        
 
     }
 

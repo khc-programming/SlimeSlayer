@@ -63,10 +63,10 @@ public class UIMenu : BaseUI
         GameScene.isState = false;
         SceneMng.Instance.EnableDelay(1.0f, SceneType.LobbyScene);
 
-        // 1초동안 화면을 검게 만든다.
+        
         UIMng.Instance.FadeOut(1);
 
-        // 1초뒤에 로딩 ui를 보여준다.
+       
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
         gameObject.SetActive(false);

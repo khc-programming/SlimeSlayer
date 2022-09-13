@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 1. 신이 시작하면 on hp가 몇개인지 받는다.
-// 2. 이상한 위치에 hp 바를 갯수만큼 만든다.
-// 3. 투명화 후 캐릭터에 연결한다.
-// 4. 연결된 녀석의 hp를 실시간으로 확인한다.
-// 5. hp 값이 변화 데미지를 받으면 켜진드 set 데미지가 호출되면 켜진다.
 public class UIHpMng : BaseUI
 {
     public List<UIHp> hpList = new List<UIHp>();

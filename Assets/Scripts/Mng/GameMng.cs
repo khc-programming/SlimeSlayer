@@ -80,16 +80,10 @@ public class GameMng : Mng<GameMng>
 
     #endregion
 
-    //None = 0,
-    //    GameMng = 1,
-    //    UIMng = 2,
-    //    SceneMng = 4,
-    //    UnitMng = 8,
-    //    TargetMng = 16,
-    //    ControlMng = 32
+
     public void get()
     {
-        //DataManager.Load(TableType.CHARACTERTABLE);
+        
         DataManager.Load(TableType.PLAYERTABLE);
         DataManager.Load(TableType.MONSTERTABLE);
         DataManager.Load(TableType.ITEMTABLE);
@@ -152,8 +146,7 @@ public class GameMng : Mng<GameMng>
 
             }
 
-            GameDB.SetCharInfo(1,1, GameDB.userInfo.uniqueCount++,true,new int[] {0,0,0} , tempSaveSkillList);
-                //GameDB.userInfo.listOfChar.AddRange(GameDB.charDic.Values);
+                GameDB.SetCharInfo(1,1, GameDB.userInfo.uniqueCount++,true,new int[] {0,0,0} , tempSaveSkillList);
                 GameDB.SetCharInfoUpdate(GameDB.userInfo.uniqueCount - 1);
                 GameDB.userInfo.jobType = GameDB.charDic[GameDB.userInfo.uniqueCount - 1].jobType;
                 GameDB.userInfo.SetCharUniqueID = GameDB.charDic[GameDB.userInfo.uniqueCount - 1].uniqueID;
@@ -167,17 +160,13 @@ public class GameMng : Mng<GameMng>
         SceneMng.Instance.AddScene<GameScene>(SceneType.GameScene);
         SceneMng.Instance.AddScene<BossScene>(SceneType.BossScene);
         SceneMng.Instance.AddScene<TitleScene>(SceneType.TitleScene);
-        //print(UnitMng.Instance);
-        // print(TargetMng.Instance);
+       
         ControlMng.Instance.SetEnable(false);
 
 
         SceneMng.Instance.EnableDelay(1f, SceneType.TitleScene);
 
         UIMng.Instance.FadeOutDelay(0f);
-
-        //UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
-
         UIMng.Instance.SetMoney(GameDB.money);
     }
 
@@ -245,12 +234,6 @@ public class GameMng : Mng<GameMng>
     // Update is called once per frame
     void Update()
     {
-
-        
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    print(GameDB.MngEnabled);
-        //}
 
         enableCheck();
         selectRun(255);

@@ -35,7 +35,7 @@ public class UICharacterInvenItem : BaseUI
     {
         playerInfo = info;
 
-        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
+        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정
         if (info != null)
         {
             
@@ -88,37 +88,7 @@ public class UICharacterInvenItem : BaseUI
                 }
             }
 
-            //if(name != null)
-            //{
-            //    name.text = info.name;
-            //    name.gameObject.SetActive(true);
-
-            //}
-
-            //if (atk != null)
-            //{
-            //    atk.text = info.maxAttack.ToString();
-            //    atk.gameObject.SetActive(true);
-            //}
-
-            //if (def != null)
-            //{
-            //    def.text = info.maxDefence.ToString();
-            //    def.gameObject.SetActive(true);
-            //}
-
-            //if (hp != null)
-            //{
-            //    hp.text = info.maxHp.ToString();
-            //    hp.gameObject.SetActive(true);
-            //}
-
-            //if (job != null)
-            //{
-
-            //    job.text =  "("+ info.job.ToString() + ")";
-            //    job.gameObject.SetActive(true);
-            //}
+        
 
             if (slot != null)
             {
@@ -140,18 +110,7 @@ public class UICharacterInvenItem : BaseUI
         }
     }
 
-    //public void SetInfo(PlayerInfo info)
-    //{
-    //    SetInfo(info);
 
-    //    if ((info.jobType & characterJobType) != characterJobType)
-    //    {
-    //        shadow.gameObject.SetActive(true);
-    //    }
-    //    else
-    //        shadow.gameObject.SetActive(false);
-
-    //}
 
 
     public void SetButtonListener(System.Action<PlayerInfo> action)
@@ -173,11 +132,7 @@ public class UICharacterInvenItem : BaseUI
         if (name != null) name.gameObject.SetActive(false);
         if (priceText != null) priceText.gameObject.SetActive(false);
         if (checkBox != null) checkBox.gameObject.SetActive(false);
-        //if (name != null) slot.gameObject.SetActive(false);
-        //if (atk != null) slot.gameObject.SetActive(false);
-        //if (def != null) slot.gameObject.SetActive(false);
-        //if (hp != null) slot.gameObject.SetActive(false);
-        //if (job != null) slot.gameObject.SetActive(false);
+       
 
         foreach (var img in star)
             img.gameObject.SetActive(false);
@@ -205,12 +160,7 @@ public class UICharacterInvenItem : BaseUI
             button.onClick.AddListener(OnClick);
 
      
-        //name = UtilHelper.Find<TMP_Text>(transform, "NAME", false, false);
-        //atk = UtilHelper.Find<TMP_Text>(transform, "ATK", false, false);
-        //def = UtilHelper.Find<TMP_Text>(transform, "DEF", false, false);
-        //hp = UtilHelper.Find<TMP_Text>(transform, "HP", false, false);
-        //job = UtilHelper.Find<TMP_Text>(transform, "JOB", false, false);
-        //print(job);
+ 
 
     }
 

@@ -68,10 +68,6 @@ public abstract class Unit : MonoBehaviour
 
     }
 
-    //public virtual void OnQuest()
-    //{
-
-    //}
 
     #endregion
 

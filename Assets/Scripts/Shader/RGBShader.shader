@@ -40,9 +40,9 @@ Shader "MyShader/RGBShader"
         // 정점 단위로 연산처리가 되고, 정점과 정점의 사이는
         // 레스터라이저에 의해서 픽셀로 보간처리가 됩니다.
         // 픽셀은 깊이 값을 갖게 되고, 이 깊이 값을 활용해서
-        // 출력에 대한 우선순위가 지정되게 됩니다.
+        // 출력에 대한 우선순위가 지정되게 된다.
 
-        // 깊이 버퍼를 사용하지 않겠다.!
+        // 깊이 버퍼를 사용하지 않겠다.
         ZWrite Off
 
         Blend  One  OneMinusSrcAlpha
@@ -56,7 +56,7 @@ Shader "MyShader/RGBShader"
         
         // SURFACE를 계산하는 함수의 이름은 surf
         // 광원을 계산하는 함수의 이름은 Standard 
-        //        실질적인 이름은 LightingStandard
+        // 실질적인 이름은 LightingStandard
         // 그림자를 계산하는 함수의 이름은 fullforwardshadows 
         // 알파연산을 처리하고, 성능에 따라 지원기능을 설정하겠다.!
         #pragma  surface surf Lambert alpha:auto
@@ -78,18 +78,18 @@ Shader "MyShader/RGBShader"
             float2 uv_MainTex;
         };
 
-        // CG프로그램에서 작성하는 프로그램방법.!
+        // CG프로그램에서 작성하는 프로그램방법
         // 표면을 계산하는 함수를 호출한 이후에
         // 광원을 계산하는 함수가 호출됩니다.
         // Albedo값에 색상값을 넣어주면
         // 광원을 계산하는 함수에서 그 값을 활용해서
-        // 밝고 어두움에 대한 색상값을 연산하게 됩니다.
+        // 밝고 어두움에 대한 색상값을 연산하게 된다.
         void surf (Input IN, inout SurfaceOutput o)
         {
             // Albedo comes from a texture tinted by color
             // 텍스처와 텍스처의 좌표값을 넣어주면 
             // 텍스처 좌표에 맞는 픽셀을 얻어오는 함수.
-            // 0.3 * 0.3 = 곱셈연산처리로 인해 색상이 어두워진다.!
+            // 0.3 * 0.3 = 곱셈연산처리로 인해 색상이 어두워진다.
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
             // 빛과 연산되지 않을 색상값
             o.Emission = c + float3(_R, _G, _B);

@@ -51,7 +51,6 @@ public class UISkillContent : BaseUI
             GameDB.player.GetPlayerInfo.isSkill3 = true;
         }
 
-        //GameDB.player.GetPlayerInfo.isSkill1
         skillClose.gameObject.SetActive(true);
         
     }
@@ -227,17 +226,7 @@ public class UISkillContent : BaseUI
                 skillUp.interactable = false;
                 }
 
-        //if (GameDB.player.GetPlayerInfo.skillPoint > 0)
-        //{
-        //    shadow.gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    shadow.gameObject.SetActive(true);
-        //}
-
-        
-        //SetUpdate();
+    
     }
 
     public void SetRayCast(bool path, SaveSkill saveSkill = null)

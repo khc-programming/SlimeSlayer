@@ -53,7 +53,6 @@ public class AIGrid2DRenderer : BaseAIPath
         }
     }
 
-    // 전테 back 노드를 리섹하는 코드
     public void OnReset()
     {
         foreach (AINode2D value in node2Ds)
@@ -133,12 +132,6 @@ public class AIGrid2DRenderer : BaseAIPath
 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     #region BaseAIPath로부터 상속받은 함수목록
     public override void Init()
     {
@@ -146,7 +139,6 @@ public class AIGrid2DRenderer : BaseAIPath
         node2Ds = new AINode2D[node2DCount, node2DCount];
         node2DPrefab = Resources.Load<AINode2D>("Prefab/AI/AINode2D");
        
-        // CreateGrid2D();
     }
     public override void Run()
     {
@@ -159,3 +151,4 @@ public class AIGrid2DRenderer : BaseAIPath
     }
     #endregion BASEUI로부터 상속받은 함수목록
 }
+

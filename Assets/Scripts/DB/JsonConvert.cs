@@ -38,9 +38,8 @@ public static class JsonConvert
         Wrapper<T> wrapper = new Wrapper<T>();
         wrapper.Items = array;
 
-        // 두번째 매개변수로 true값을 넣어주면 사용자가 보기 쉬운 형태의 json 파일로 만들어집니다.
+        // 두번째 매개변수로 true값을 넣어주면 사용자가 보기 쉬운 형태의 json 파일로 만든다.
         // ( 행이 개행처리됩니다. )
-
         return JsonUtility.ToJson(wrapper, prettyPrint);
     }
 }

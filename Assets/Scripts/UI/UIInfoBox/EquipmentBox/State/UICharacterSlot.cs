@@ -36,11 +36,9 @@ public class UICharacterSlot : BaseUI
     {
         playerInfo = info;
 
-        // 정보를 받았을때 인벤토리 버튼이 어떻게 보여줘야 할 지 정보를 설정해야 합니다.
+        
         if (info != null)
         {
-
-            //아이템 아이콘 설정
             if (icon != null)
             {
                 icon.gameObject.SetActive(true);
@@ -48,7 +46,7 @@ public class UICharacterSlot : BaseUI
                 icon.sprite = info.sprite;
             }
 
-            // 아이템 레벨 설정
+         
             if (levelText != null)
             {
                 if (info.level >= 100) levelText.color = maxColor;
@@ -58,7 +56,7 @@ public class UICharacterSlot : BaseUI
             }
 
 
-            // 별 등급 표시
+          
             for (int i = star.Count - 1; i >= 0; --i)
             {
                 if ((info.grade - 1) < i)
@@ -129,18 +127,7 @@ public class UICharacterSlot : BaseUI
         }
     }
 
-    //public void SetInfo(PlayerInfo info)
-    //{
-    //    SetInfo(info);
 
-    //    if ((info.jobType & characterJobType) != characterJobType)
-    //    {
-    //        shadow.gameObject.SetActive(true);
-    //    }
-    //    else
-    //        shadow.gameObject.SetActive(false);
-
-    //}
 
 
     public void SetButtonListener(System.Action<PlayerInfo> action)

@@ -5,11 +5,7 @@ using UnityEngine;
 public class UIGameState : MonoBehaviour
 {
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     public void GameClear()
     {
@@ -21,9 +17,5 @@ public class UIGameState : MonoBehaviour
         UIMng.Instance.Get<UIIngame>(UIType.UIIngame).Open(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

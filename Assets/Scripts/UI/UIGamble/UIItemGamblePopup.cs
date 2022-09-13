@@ -74,7 +74,7 @@ public class UIItemGamblePopup : BaseUI
         button = GetComponent<Button>();
         if (button != null)
         {
-            //button.onClick.AddListener(Close);
+            
             button.onClick.AddListener(OnClick);
         }
             

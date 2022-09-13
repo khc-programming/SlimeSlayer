@@ -30,14 +30,7 @@ public class UIMng : Mng<UIMng>
         if ((GameDB.MngEnabled & (int)MngType.UIMng) != (int)MngType.UIMng)
             return;
 
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            eventMng.enabled = false;
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            eventMng.enabled = true;
-        }
+       
 
         uiDic[UIType.UIIngame].Run();
         uiDic[UIType.UIMenu].Run();
@@ -48,25 +41,7 @@ public class UIMng : Mng<UIMng>
         uiDic[UIType.UIUpgradeShop].Run();
         uiDic[UIType.UIShop].Run();
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            GameDB.Load("PlayerInfo.json");
-            UIInventory i = GameObject.FindObjectOfType<UIInventory>();
-            i.SetUITab(ItemCategory.ALL);
-            i.SetItemList(GameDB.GetItems((int)ItemBitCategory.ALL), (int)GameDB.userInfo.jobType);
-            //i.SetUITab(ItemCategory.WEAPON);
-            //i.SetItemList(GameDB.GetItems((int)ItemBitCategory.WEAPON), (int)GameDB.userInfo.jobType);
-            //i.SetUITab(ItemCategory.ALL);
-            //i.SetItemList(GameDB.GetItems((int)ItemBitCategory.ALL), (int)GameDB.userInfo.jobType);
-
-            UICharacterInventory cinven = GameObject.FindObjectOfType<UICharacterInventory>();
-            cinven.SetUITab(Job.ALL);
-            cinven.SetItemList(GameDB.GetCharList((int)JobBit.ALL));
-            //cinven.SetUITab(Job.WARRIOR);
-            //cinven.SetItemList(GameDB.GetCharList((int)JobBit.WARRIOR));
-            //cinven.SetUITab(Job.ALL);
-            //cinven.SetItemList(GameDB.GetCharList((int)JobBit.ALL));
-        }
+        
     }
 
     public override void FixRun()
@@ -80,7 +55,7 @@ public class UIMng : Mng<UIMng>
     }
     public override void Init()
     {
-        //GameDB.Load("PlayerInfo.json");
+        
         mngType = MngType.UIMng;
         eventMng = gameObject.AddComponent<EventSystem>();
         gameObject.AddComponent<StandaloneInputModule>();
@@ -108,12 +83,12 @@ public class UIMng : Mng<UIMng>
         if (quest != null) quest.SetQuestList();
     }
 
-    // UIDialogMng start
+  
 
-    public void OnTouchMode(string name, bool idDeal)// , QuestMode mode)
+    public void OnTouchMode(string name, bool idDeal)
     {
         UIDialogMng dialogMng = Get<UIDialogMng>(UIType.UIDialogMng);
-        if (dialogMng != null) dialogMng.OnTouchMode(name , idDeal);// , mode);
+        if (dialogMng != null) dialogMng.OnTouchMode(name , idDeal);
     }
 
     public void OffTouchMode()
@@ -122,10 +97,10 @@ public class UIMng : Mng<UIMng>
         if (dialogMng != null) dialogMng.OffTouchMode();
     }
 
-    public UIDialog UIDialogCreate(Transform pivot, string name)//, QuestMode mode = QuestMode.TITLE)
+    public UIDialog UIDialogCreate(Transform pivot, string name)
     {
         UIDialogMng dialogMng = Get<UIDialogMng>(UIType.UIDialogMng);
-        if (dialogMng != null) return dialogMng.UIDialogCreate(pivot, name);//, mode);
+        if (dialogMng != null) return dialogMng.UIDialogCreate(pivot, name);
 
         return null;
     }
@@ -133,24 +108,24 @@ public class UIMng : Mng<UIMng>
 
     public void DelaySet()
     {
-        //uiDic[UIType.UIInfoBox].Init();
+      
     }
 
     public override void OnActive()
     {
-      //  GameDB.MngEnabled += (int)MngType.UIMng;
+      
     }
     public override void OnDeactive()
     {
-      //  GameDB.MngEnabled -= (int)MngType.UIMng;
+     
     }
     public override void OnGameEnable()
     {
-      //  GameDB.MngEnabled += (int)MngType.UIMng;
+      
     }
     public override void OnGameDisable()
     {
-      //  GameDB.MngEnabled -= (int)MngType.UIMng;
+      
     }
 
     public override void SetActive(bool state)
@@ -226,7 +201,7 @@ public class UIMng : Mng<UIMng>
         FadeOut(targetTime);
     }
 
-    // UIIngame 모드를 변경하는 함수 게임/보스/로비 모드
+    // UIIngame 모드를 변경하는 함수 게임/로비 모드
     public void modeChange()
     {
         UIIngame ingame = Get<UIIngame>(UIType.UIIngame);
@@ -262,10 +237,10 @@ public class UIMng : Mng<UIMng>
 
 
 
-    // 비동기로 로드하는 코드는 차후 정리해서 수업을 진행합니다.
+    
     public BaseUI Add(UIType ui, bool activeState = true , bool init = true)
     {
-        // ui가 등록되어 있다면 등록되어 있는 ui를 넘겨주도록 합니다.
+        // ui가 등록되어 있다면 등록되어 있는 ui를 넘겨주도록 한다.
         if (uiDic.ContainsKey(ui))
         {
             uiDic[ui].SetActive(activeState);
@@ -297,7 +272,7 @@ public class UIMng : Mng<UIMng>
             uiDic.Remove(ui);
         }
     }
-    // 특정 ui에게 특정 함수를 호출하도록 강제하기 위한 함수입니다.
+    // 특정 ui에게 특정 함수를 호출하도록 강제하기 위한 함수
     public void CallEvent(UIType ui,
                            string function,
                            System.Object obj = null)
@@ -310,7 +285,7 @@ public class UIMng : Mng<UIMng>
 
     }
 
-    // uiDic에 원하는 ui가 있다면 받아온다
+    // uiDic에 원하는 ui가 있다면 받아
     public T Get<T>(UIType ui) where T : BaseUI
     {
         if (uiDic.ContainsKey(ui))
@@ -319,7 +294,7 @@ public class UIMng : Mng<UIMng>
         return null;
     }
 
-    // 특정 ui를 찾아서 상태를 변경합니다.
+    // 특정 ui를 찾아서 상태를 변경
     public void SetActive(UIType ui, bool state)
     {
         if (uiDic.ContainsKey(ui))

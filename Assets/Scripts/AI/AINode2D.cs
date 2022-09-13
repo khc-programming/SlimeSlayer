@@ -179,9 +179,6 @@ public class AINode2D : MonoBehaviour
         hCost = hcost;
     }
 
-    //public bool Contains(Vector3 position)
-    //{
-    //    return collider2D.bounds.Contains(position);
-    //}
+ 
 
 }

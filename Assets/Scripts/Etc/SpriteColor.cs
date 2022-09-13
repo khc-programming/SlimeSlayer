@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 캐릭터 매니저 
-// 오디오 매니저
-// ui 매니저
-// 이펙트 : 메쉬 이펙트( 맥스, 마야, 블랜더 ), 파티클 이펙트 
-// 비트연산자를 사용하는 이유 : 
-// 하나의 변수를 사용해서 관리할 수 있다는 장점이 있습니다.
+
 public enum ColorMode
 {
     One,
@@ -103,14 +98,14 @@ public class SpriteColor : MonoBehaviour
 
     }
 
-    // 오후에 switch로 바꿔서 처리하는 방법을 다시 보여드리겠습니다.
+    
     void Update()
     {
         if (execute == false)
             return;
 
         elapsed += Time.deltaTime / speed;
-        //print(elapsed);
+        
         Color color = Color.Lerp(start, end, elapsed);
         rgbMaterial.SetFloat("_R", color.r);
         rgbMaterial.SetFloat("_G", color.g);
@@ -130,12 +125,12 @@ public class SpriteColor : MonoBehaviour
             }
             switch( colorMode )
             {
-                // 한번씩만 실행되는 모드입니다.
+                // 한번씩만 실행되는 모드
                 case ColorMode.Inverse:
                 case ColorMode.One:
                     execute = false;
                     break;
-                    // 반복 실행되는 모드입니다.
+                    // 반복 실행되는 모드
                 case ColorMode.Pingpong:
                     {
                         Color temp = start;
@@ -145,7 +140,7 @@ public class SpriteColor : MonoBehaviour
                     break;
 
                     // 여러번( 사용자가 지정한 수대로 )
-                    // 실행되는 모드입니다.
+                    // 실행되는 모드
                 case ColorMode.NumberOfTimes:
                     --count;
                     if (count <= 0)
@@ -170,3 +165,4 @@ public class SpriteColor : MonoBehaviour
 
     }
 }
+

@@ -28,47 +28,6 @@ public class AIPathMng : Mng<AIPathMng>
             return;
         
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            AINode2D node = AIgrid2DRenderer.ClickNode2D();
-            if (node != null)
-            {
-
-                node.SetNodeType(AINode2DType.Wall);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            AINode2D node = AIgrid2DRenderer.ClickNode2D();
-            if (node != null)
-            {
-
-                node.SetNodeType(AINode2DType.None);
-            }
-        }
-
-        // r키가 입력되면 길찾기 테이블을 리셋합니다.
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-           
-            // 전체 노드를 초기화합니다.
-            AIgrid2DRenderer.OnReset();
-            AIpathFinding2D.OnReset();
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            AIgrid2DRenderer.WallCreate();
-        }
-
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            //Del(AIPathType.AIGrid2DRenderer);
-            AIgrid2DRenderer.WallDestory();
-        }
-
     }
 
     public override void FixRun()
@@ -143,10 +102,10 @@ public class AIPathMng : Mng<AIPathMng>
         
     }
 
-    // 비동기로 로드하는 코드는 차후 정리해서 수업을 진행합니다.
+    // 비동기로 로드하는 코드는 차후 정리해서 수업을 진행
     public BaseAIPath Add(AIPathType ai, bool activeState = true)
     {
-        // ui가 등록되어 있다면 등록되어 있는 ui를 넘겨주도록 합니다.
+        // ui가 등록되어 있다면 등록되어 있는 ui를 넘겨준다.
         if (aiDic.ContainsKey(ai))
         {
             aiDic[ai].SetActive(activeState);
@@ -224,7 +183,7 @@ public class AIPathMng : Mng<AIPathMng>
 
     public void Find(AIPath2D sk, AIPath2D t , List<AINode2D> sb = null)
     {
-        //AIPathFinding2D pathPinding = Get<AIPathFinding2D>(AIPathType.AIPathFinding2D);
+        
         if (AIpathFinding2D != null)
         {
             
@@ -242,22 +201,5 @@ public class AIPathMng : Mng<AIPathMng>
     }
 
 
-    void Update()
-    {
-        
-        //if (Input.GetKeyUp(KeyCode.A))
-        //{
-        //    CallEvent(AIPathType.AIGrid2DRenderer, "CreateGrid2D");
-        //}
-        //if (Input.GetKeyUp(KeyCode.S))
-        //{
-            
-        //    Del(AIPathType.AIGrid2DRenderer);
-        //}
-        //if (Input.GetKeyUp(KeyCode.D))
-        //{
-        //    Add(AIPathType.AIGrid2DRenderer, true);
-        //}
-
-    }
+  
 }

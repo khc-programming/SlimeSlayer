@@ -26,10 +26,8 @@ public class UIDungeon : BaseUI
         SceneMng.Instance.EnableDelay(1.0f, SceneType.GameScene, 0);
          
 
-        // 1초동안 화면을 검게 만든다.
+        
         UIMng.Instance.FadeOut(1);
-
-        // 1초뒤에 로딩 ui를 보여준다.
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
     }
@@ -48,10 +46,10 @@ public class UIDungeon : BaseUI
         SceneMng.Instance.EnableDelay(1.0f, SceneType.GameScene, 1);
 
 
-        // 1초동안 화면을 검게 만든다.
+      
         UIMng.Instance.FadeOut(1);
 
-        // 1초뒤에 로딩 ui를 보여준다.
+        
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
 
@@ -69,10 +67,10 @@ public class UIDungeon : BaseUI
         SceneMng.Instance.EnableDelay(1.0f, SceneType.GameScene, 3);
 
 
-        // 1초동안 화면을 검게 만든다.
+        
         UIMng.Instance.FadeOut(1);
 
-        // 1초뒤에 로딩 ui를 보여준다.
+        
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
 
@@ -92,10 +90,10 @@ public class UIDungeon : BaseUI
         SceneMng.Instance.EnableDelay(1.0f, SceneType.GameScene, 4);
 
 
-        // 1초동안 화면을 검게 만든다.
+        
         UIMng.Instance.FadeOut(1);
 
-        // 1초뒤에 로딩 ui를 보여준다.
+        
         UIMng.Instance.ShowDelay(1.0f, UIType.LoadingUI);
         UnitMng.Instance.Clear();
     }
@@ -104,7 +102,7 @@ public class UIDungeon : BaseUI
     {
 
         AudioMng.Instance.PlayUI("UI_Exit");
-        //UIMng.Instance.Get<UIInfoBox>(UIType.UIInfoBox).SetActive(false);
+        
         gameObject.SetActive(false);
         UnitMng.Instance.Resume();
     }

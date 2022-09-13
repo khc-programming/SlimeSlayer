@@ -63,17 +63,7 @@ public class UserInfo
         return null;
     }
 
-    //// 캐릭터 아이티를 통해 캐릭터 정보를 받아온다
-    //public SaveCharacter Get(int characterUniqueID)
-    //{
-    //    foreach (SaveCharacter character in listOfChar)
-    //    {
-    //        if (character.uniqueID == characterUniqueID)
-    //            return character;
-    //    }
-    //    return null;
-    //}
-
+  
 
     // 캐릭터가 착용하고 있아 아이템의 유니크 아이디를 받는다.
     public int GetIDOfItem(int charID, int category)
@@ -88,9 +78,7 @@ public class UserInfo
 
     public void OnReset()
     {
-        //listOfChar.Clear();
-
-        //listOfItems.Clear();
+        
     }
 
 }

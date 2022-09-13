@@ -8,7 +8,7 @@ public class CheckPivot : MonoBehaviour
     public float radius = 0.1f;
     public Color color = Color.red;
     public Vector3 size = Vector3.one;
-    //Gizmos gizmos = new Gizmos();
+   
 
 
 

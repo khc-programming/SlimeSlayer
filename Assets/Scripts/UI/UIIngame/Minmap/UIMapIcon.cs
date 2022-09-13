@@ -49,9 +49,6 @@ public class UIMapIcon : MonoBehaviour
 
     public void Run()
     {
-
-        //if(target == null && targetState == true)
-        //    iconDestroy();
         
         if(target != null)
             transform.localPosition = MinimapHelper.WorldPosToMapPos(target.position);

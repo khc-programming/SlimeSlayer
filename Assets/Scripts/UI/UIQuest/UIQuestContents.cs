@@ -21,7 +21,7 @@ public class UIQuestContents : BaseUI
     public Vector2 v = Vector2.zero;
     private float opset = 0;
 
-    // Start is called before the first frame update
+  
 
 
     
@@ -68,21 +68,6 @@ public class UIQuestContents : BaseUI
 
 
 
-        //foreach (var value in questContentList)
-        //{
-
-        //    value.gameObject.SetActive(false);
-        //}
-
-        //for(int i = 0; i < itemCount - 3; i++)
-        //{
-        //    if (i < questList.Count)
-        //    {
-        //        SetData(questContentList[i], i);
-        //        questContentList[i].gameObject.SetActive(true);
-        //    }
-                
-        //}
         SetContentHight();
       
     }
@@ -121,8 +106,7 @@ public class UIQuestContents : BaseUI
     private void CreateItem()
     {
         questContent = Resources.Load<UIQuestContent>("Prefab/UI/UIQuestContent");
-        // 콘텐츠 컴포넌트의에 넣을 uicontent을 생성한다.
-        //RectTransform scrollRect = scroll.GetComponent<RectTransform>();
+        
 
         itemCount = 0;
         
@@ -265,15 +249,6 @@ public class UIQuestContents : BaseUI
     #endregion
   
 
-    //private void Update()
-    //{
-        
-    //    if(Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        scroll.normalizedPosition = v;
-    //    }
-
-    //    Run();
-    //}
+    
 
 }

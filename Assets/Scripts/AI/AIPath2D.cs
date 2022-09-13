@@ -36,3 +36,4 @@ public class AIPath2D : MonoBehaviour
         this.path.AddRange(path);
     }
 }
+

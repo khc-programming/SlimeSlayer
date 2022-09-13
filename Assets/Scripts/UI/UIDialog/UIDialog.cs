@@ -4,26 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/*
-01.  SetDialog - 다이얼로그 정보를 세팅한다, 다이얼로그 주인 이름을 확인하고 퀘스트를 받아온다 - ok
-02. OnTouchMode - 다일어로그 터치 모드로 전환한다.  - ok
-03. AutoMassage -  퀘스트 대화 모드로 퀘스트 다이얼모드 값에 따라 자동으로 대화 상자를 바꾼다
-      Quest == null : 현재 퀘스가 널이면 널 텍스트를 띄운 후 다일어로그 Off 모드로 전환
-      Quest != null : 현재 퀘스트가 널이 아니면 현재 퀘스트의 다이얼모드에 따라 자동으로 대화가 진행된다.
-    QuestDialogMode 
-      - START : 퀘스트를 받을지 말지 정하는 대화
-      - PROCESS : 퀘스트를 포기할지 말지 정하는 대화
-      - GIVEUP : 퀘스트를  포기하면 나오는 대화
-      - ClEAR :  퀘스트 보상을 받고 퀘스트를 변경한다/
-04. SetMassage - 대화 상자의 텍스트 값을 교체한다 - ok
-05. DealOnClick - 거래 ui를 키고 다이얼로그 off 모드로 변경한다 - ok
-06. QuestOnClick - 퀘스트 대화 모드로 전환한다 // 퀘스트 상태에 따라 퀘스트를 업데이트/교체 한다 - ok
-07. OpenOnClick - 퀘스트 박스를 연다, 퀘스트를 받는다 - ok
-08. ExitOnClick - 대화 끝내기 - ok
-09. GiveUpOnClick - 퀘스트 포기 및 대화 포기 대화 모드 진행 - ok
-10. NoOnClick - 현재 대화 모드의 대화가 끝나면 다이얼로그 오프 모드로 변화 - ok
-11.targetChase(); 대화 상자가 npc를 쫓아 다니도록
- */
 
 
 public class UIDialog : BaseUI
@@ -46,7 +26,7 @@ public class UIDialog : BaseUI
 
     public RectTransform rewardBox;
     public TMP_Text rewardBoxNameText;
-    //public TMP_Text rewardBoxContentText;
+    
     public ScrollRect rewardBoxScroll;
 
 
@@ -170,7 +150,7 @@ public class UIDialog : BaseUI
             SetRewardParent(questBoxScroll.content.transform);
             questBox.gameObject.SetActive(true);
 
-            // 쉴드 안 눌리게 하는 백그라운드
+            
             BackImage.gameObject.SetActive(true);
         }
         else if (dialogMassages.Count == 2)
@@ -313,7 +293,7 @@ public class UIDialog : BaseUI
             questBoxContentText.text = currQuest.GetString("CONTENT");
 
             rewardBoxNameText.text = currQuest.GetString("QUESTNAME");
-            //rewardBoxContentText.text = currQuest.GetString("COTENT");
+            
 
             rewardCreat();
             CountCreat();
@@ -1068,7 +1048,7 @@ public class UIDialog : BaseUI
                 }
 
 
-                ///
+               
 
 
 
@@ -1077,8 +1057,7 @@ public class UIDialog : BaseUI
         }
 
 
-        ///////////////////////
-        ///
+     
         if (currQuest.GetQuestCount(QuestType.GAMBLE) != null)
         {
             foreach (var value in currQuest.GetQuestCount(QuestType.GAMBLE))
@@ -1216,14 +1195,13 @@ public class UIDialog : BaseUI
                 }
 
 
-                ///
-
+            
 
 
 
             }
         }
-        ///////////////////////
+        
 
 
 

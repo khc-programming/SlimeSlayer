@@ -53,12 +53,6 @@ public class Weapon : MonoBehaviour
             float B = 0;
             if (job == Job.WARRIOR)
             {
-                //weaponSprite.sprite = DataManager.items[0];
-
-                //R = DataManager.ToI(TableType.ITEMTABLE, 1, "R");
-                //G = DataManager.ToI(TableType.ITEMTABLE, 1, "G");
-                //B = DataManager.ToI(TableType.ITEMTABLE, 1, "B");
-
                 weaponSprite.sprite = GameDB.itemDicAll[1].sprite;
                 color = GameDB.itemDicAll[1].color;
 
